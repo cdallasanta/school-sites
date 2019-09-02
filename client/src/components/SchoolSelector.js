@@ -21,7 +21,6 @@ class SchoolSelector extends React.Component {
   }
 
   schoolsForSelect = () => {
-    debugger;
     const schools = this.state.district.schools.filter(s => s.grade_level === this.state.grade_level)
 
     return schools.map((school, i) => {

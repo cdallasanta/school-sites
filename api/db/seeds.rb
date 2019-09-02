@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# setup SSD and several schools
+# setup SSD
 ssd = District.create(name:"Seattle School District")
 School.create(
   name:"Adams Elementary School",
@@ -17,6 +17,7 @@ School.create(
   grade_level: "elementary"
 )
 
+# elementary seeds
 School.create(
   name:"Alki Elementary School",
   district: ssd,
@@ -87,6 +88,63 @@ School.create(
   district: ssd,
   homepage_url: "https://coees.seattleschools.org/",
   grade_level: "elementary"
+)
+
+# k-8 seeds
+School.create(
+  name: "Catharine Blaine",
+  address: "2550 34th Ave W Seattle, WA 98199",
+  phone: "206-252-1920",
+  district: ssd,
+  homepage_url: "https://blainek8.seattleschools.org/",
+  grade_level: "k-8"
+)
+
+School.create(
+  name: "Louisa Boren STEM",
+  address: "5950 Delridge Way SW Seattle, WA 98106",
+  phone: "206-252-8450",
+  district: ssd,
+  homepage_url: "https://borenstemk8.seattleschools.org/",
+  grade_level: "k-8"
+)
+
+# middle schools
+School.create(
+  name: "Jane Addams Middle School",
+  address: "11051 34th Ave NE Seattle, WA 98125",
+  phone: "206-252-4500",
+  district: ssd,
+  homepage_url: "https://addamsms.seattleschools.org/",
+  grade_level: "middle"
+)
+
+School.create(
+  name: "David T. Denny International Middle School",
+  address: "2601 SW Kenyon St Seattle, WA 98126",
+  phone: "206-252-9000",
+  district: ssd,
+  homepage_url: "https://dennyms.seattleschools.org/",
+  grade_level: "middle"
+)
+
+# high schools
+School.create(
+  name: "Ballard High School",
+  address: "1418 NW 65th St Seattle, WA 98117",
+  phone: "206-252-1000",
+  district: ssd,
+  homepage_url: "https://ballardhs.seattleschools.org/",
+  grade_level: "high"
+)
+
+School.create(
+  name: "The Center High School",
+  address: "305 Harrison St Seattle, WA 98109",
+  phone: "206-252-9850",
+  district: ssd,
+  homepage_url: "https://centerhs.seattleschools.org/",
+  grade_level: "high"
 )
 
 # dummy user
