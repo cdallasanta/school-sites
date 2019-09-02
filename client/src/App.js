@@ -9,16 +9,16 @@ class App extends React.Component {
 
   componentDidMount(){
     fetch("http://localhost:3001/api/districts/1")
-      .then(resp => {
-        debugger;
-        this.setstate({district: resp})
+      .then(resp => resp.json())
+      .then(data => {
+        this.setState({district: data});
       })
   }
 
   render(){
     return (
       <div className="App">
-        <SchoolSelector district={this.props.district} />
+        <SchoolSelector district={this.state.district} />
       </div>
     );
   }

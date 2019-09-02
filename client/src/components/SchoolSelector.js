@@ -10,14 +10,14 @@ class SchoolSelector extends React.Component {
   }
 
   optionsForSelect = () => {
-    return this.props.district.schools.map(school => {
-      return <option value={school.id} >{school.name}</option>
+    return this.props.district.schools.map((school, i) => {
+      return <option value={school.id} key={i}>{school.name}</option>
     })
   }
 
   render(){
     let resp;
-    if (this.state.district){
+    if (this.props.district){
       resp = <select value={this.state.value} onChange={this.handleChange}>
           {this.optionsForSelect()}
         </select>
