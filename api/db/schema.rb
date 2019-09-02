@@ -19,8 +19,11 @@ ActiveRecord::Schema.define(version: 2019_09_02_233844) do
     t.integer "author_id"
     t.text "title"
     t.text "content"
+    t.string "blogable_type"
+    t.bigint "blogable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["blogable_type", "blogable_id"], name: "index_blogs_on_blogable_type_and_blogable_id"
   end
 
   create_table "districts", force: :cascade do |t|

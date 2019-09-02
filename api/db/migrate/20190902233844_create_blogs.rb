@@ -5,6 +5,8 @@ class CreateBlogs < ActiveRecord::Migration[5.2]
       t.text :title
       t.text :content
 
+      t.references :blogable, polymorphic: true, index: true
+
       t.timestamps
     end
   end
