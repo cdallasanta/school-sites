@@ -30,7 +30,9 @@ class SchoolSelector extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.history.push(`/schools/${this.state.school_id}`)
+    if (this.state.school_id){
+      this.props.history.push(`/schools/${this.state.school_id}`)
+    }
   }
 
   dropdownForm = () => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import NavigationMenu from '../components/NavigationMenu';
 
 class SchoolContainer extends React.Component {
   state = {
@@ -14,18 +15,21 @@ class SchoolContainer extends React.Component {
       })
   }
 
-  render(){
-    let resp;
-    if (this.state.school_data){
-      resp = this.state.school_data.name
+  loadedResponse = () => {
+    if (!this.state.school_data){
+      return "Loading school data"
     } else {
-      resp = "Loading school data"
+      return (
+        <div>
+          <NavigationMenu />
+        </div>
+      )
     }
-    
+  }
+
+  render(){
     return (
-      <div>
-        {resp}
-      </div>
+      this.loadedResponse()
     )
   }
 }
