@@ -3046,3 +3046,615 @@ Processing by API::DistrictsController#show as HTML
 Completed 200 OK in 498ms (Views: 432.1ms | ActiveRecord: 40.5ms)
 
 
+Started GET "/api/districts/undefined" for ::1 at 2019-09-02 15:59:29 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mDistrict Load (0.7ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find District with 'id'=undefined):
+  
+app/controllers/api/districts_controller.rb:3:in `show'
+Started GET "/api/districts/1" for ::1 at 2019-09-02 15:59:33 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."district_id" = $1[0m  [["district_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "District"]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers] Rendered DistrictSerializer with ActiveModelSerializers::Adapter::Attributes (10.48ms)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 15:59:48 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (20.04ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:01:28 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (3.5ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (22.11ms)
+Completed 200 OK in 27ms (Views: 19.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:01:31 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (4.28ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:01:35 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (9.94ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:03:29 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.61ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:03:49 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.78ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/districts/1" for ::1 at 2019-09-02 16:26:18 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (11.6ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (16.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."district_id" = $1[0m  [["district_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "District"]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers] Rendered DistrictSerializer with ActiveModelSerializers::Adapter::Attributes (27.52ms)
+Completed 200 OK in 43ms (Views: 11.5ms | ActiveRecord: 28.6ms)
+
+
+Started GET "/api/districts/1" for ::1 at 2019-09-02 16:26:24 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."district_id" = $1[0m  [["district_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "District"]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers] Rendered DistrictSerializer with ActiveModelSerializers::Adapter::Attributes (6.92ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/districts/1" for ::1 at 2019-09-02 16:27:04 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."district_id" = $1[0m  [["district_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "District"]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers] Rendered DistrictSerializer with ActiveModelSerializers::Adapter::Attributes (10.49ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:27:04 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (4.39ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/schools/2" for ::1 at 2019-09-02 16:27:07 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 2], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (6.13ms)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/districts/1" for ::1 at 2019-09-02 16:27:09 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."district_id" = $1[0m  [["district_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "District"]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers] Rendered DistrictSerializer with ActiveModelSerializers::Adapter::Attributes (9.37ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:27:14 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (4.25ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:28:35 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (4.84ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:28:35 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.36ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:28:50 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.43ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:29:34 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.52ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:29:34 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.26ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:30:57 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (7.35ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:30:57 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.61ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:31:10 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.18ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:31:10 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (47.35ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:33:11 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (16.13ms)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:33:11 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.7ms)
+Completed 200 OK in 18ms (Views: 5.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:33:51 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (4.47ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:33:51 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (4.59ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:34:18 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.42ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:34:18 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.04ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:35:26 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (3.76ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:35:26 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (5.65ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:36:24 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (4.84ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:36:24 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (6.04ms)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:37:11 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (6.26ms)
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:37:11 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (23.3ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:37:36 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (9.72ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:37:36 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (6.89ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:37:40 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (4.39ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/schools/10" for ::1 at 2019-09-02 16:37:40 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (7.08ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/schools/11" for ::1 at 2019-09-02 16:37:43 -0700
+Processing by API::SchoolsController#show as */*
+  Parameters: {"id"=>"11"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/controllers/api/schools_controller.rb:3
+[active_model_serializers] Rendered SchoolSerializer with ActiveModelSerializers::Adapter::Attributes (6.21ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/users/1" for ::1 at 2019-09-02 16:41:32 -0700
+  [1m[35m (10.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8496546548085237075)[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to CreateBlogs (20190902233844)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (56.8ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "author_id" integer, "title" text, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190902233844_create_blogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190902233844"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (11.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(8496546548085237075)[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Started GET "/api/users/1" for ::1 at 2019-09-02 16:41:42 -0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (9.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:3
+[active_model_serializers]   [1m[36mBlog Load (7.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:3
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (69.15ms)
+Completed 200 OK in 130ms (Views: 74.8ms | ActiveRecord: 30.2ms)
+
+
