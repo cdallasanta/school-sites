@@ -7,10 +7,10 @@ class SchoolSelector extends React.Component {
   }
 
   componentDidMount(){
-    fetch("http://localhost:3001/api/districts/1")
+    const dist_id = this.props.match.params.id
+    fetch(`http://localhost:3001/api/districts/${dist_id}`)
       .then(resp => resp.json())
       .then(data => {
-        debugger;
         this.setState({district: data});
       })
   }
