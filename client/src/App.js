@@ -1,24 +1,18 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Route } from "react-router-dom";
 import SchoolSelector from './components/SchoolSelector';
+import SchoolContainer from './containers/SchoolContainer';
 
 class App extends React.Component {
-  state = {
-    district: null
-  }
-
-  componentDidMount(){
-    fetch("http://localhost:3001/api/districts/1")
-      .then(resp => resp.json())
-      .then(data => {
-        this.setState({district: data});
-      })
-  }
-
   render(){
     return (
       <div className="App">
-        <SchoolSelector district={this.state.district} />
+        <BrowserRouter>
+          <Route exact path="/" component={SchoolSelector} />
+          <Route exact path="/districts/1/selector" component={SchoolSelector} />
+          <Route exact path="/schools/1" component={SchoolContainer} />
+        </BrowserRouter>
       </div>
     );
   }

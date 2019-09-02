@@ -2,7 +2,17 @@ import React from 'react';
 
 class SchoolSelector extends React.Component {
   state = {
+    district: null,
     school_id: null
+  }
+
+  componentDidMount(){
+    fetch("http://localhost:3001/api/districts/1")
+      .then(resp => resp.json())
+      .then(data => {
+        debugger;
+        this.setState({district: data});
+      })
   }
 
   handleChange = e => {
@@ -10,17 +20,27 @@ class SchoolSelector extends React.Component {
   }
 
   optionsForSelect = () => {
-    return this.props.district.schools.map((school, i) => {
+    return this.state.district.schools.map((school, i) => {
       return <option value={school.id} key={i}>{school.name}</option>
     })
   }
 
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.history.push(`/schools/${this.state.school_id}`)
+  }
+
   render(){
     let resp;
-    if (this.props.district){
-      resp = <select value={this.state.value} onChange={this.handleChange}>
-          {this.optionsForSelect()}
-        </select>
+    if (this.state.district){
+      resp = 
+        <form>
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value={null}>Select your school</option>
+            {this.optionsForSelect()}
+          </select>
+          <input type="submit" value="Select School" onClick={e=>this.handleSubmit(e)} />
+        </form>
     } else {
       resp = "Loading schools"
     }
