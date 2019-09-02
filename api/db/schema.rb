@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2019_09_02_210952) do
     t.text "homepage_url"
     t.text "address"
     t.text "phone"
+    t.text "grade_level"
   end
 
   create_table "users", force: :cascade do |t|

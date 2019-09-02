@@ -3,6 +3,7 @@ import React from 'react';
 class SchoolSelector extends React.Component {
   state = {
     district: null,
+    grade_level: null,
     school_id: null
   }
 

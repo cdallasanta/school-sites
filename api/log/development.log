@@ -1889,3 +1889,347 @@ Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 1.2ms)
   ↳ db/seeds.rb:84
   [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:84
+Started GET "/api/districts/undefined" for ::1 at 2019-09-02 14:20:33 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"undefined"}
+  [1m[36mDistrict Load (10.0ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+Completed 404 Not Found in 21ms (ActiveRecord: 13.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find District with 'id'=undefined):
+  
+app/controllers/api/districts_controller.rb:3:in `show'
+Started GET "/api/districts/1" for ::1 at 2019-09-02 14:22:00 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.5ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (5.1ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."district_id" = $1[0m  [["district_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (12.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "District"]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers] Rendered DistrictSerializer with ActiveModelSerializers::Adapter::Attributes (127.37ms)
+Completed 200 OK in 271ms (Views: 230.4ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/api/districts/1" for ::1 at 2019-09-02 14:24:48 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."district_id" = $1[0m  [["district_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "District"]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers] Rendered DistrictSerializer with ActiveModelSerializers::Adapter::Attributes (12.81ms)
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 1.3ms)
+
+
+  [1m[35m (12.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (12.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (297.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "school_sites_development"[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (301.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "school_sites_test"[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (2006.5ms)[0m  [1m[35mCREATE DATABASE "school_sites_development" ENCODING = 'unicode'[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1523.7ms)[0m  [1m[35mCREATE DATABASE "school_sites_test" ENCODING = 'unicode'[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "districts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (22.6ms)[0m  [1m[35mCREATE TABLE "districts" ("id" bigserial primary key, "name" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" text, "organizer_id" integer, "description" text, "eventable_type" character varying, "eventable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "approved" boolean)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_eventable_type_and_eventable_id" ON "events"  ("eventable_type", "eventable_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "schools" CASCADE[0m
+  ↳ db/schema.rb:36
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "schools" ("id" bigserial primary key, "name" text, "district_id" integer, "site_rep_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "homepage_url" text, "address" text, "phone" text)[0m
+  ↳ db/schema.rb:36
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:47
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" text, "email" text, "permissions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:47
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190902210952)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190831001057),
+(20190831001327),
+(20190831001409),
+(20190902182022),
+(20190902194049);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (6.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-02 21:25:45.158286"], ["updated_at", "2019-09-02 21:25:45.158286"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "districts" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (20.9ms)[0m  [1m[35mCREATE TABLE "districts" ("id" bigserial primary key, "name" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "events" CASCADE[0m
+  ↳ db/schema.rb:24
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" text, "organizer_id" integer, "description" text, "eventable_type" character varying, "eventable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "approved" boolean)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_eventable_type_and_eventable_id" ON "events"  ("eventable_type", "eventable_id")[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "schools" CASCADE[0m
+  ↳ db/schema.rb:36
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "schools" ("id" bigserial primary key, "name" text, "district_id" integer, "site_rep_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "homepage_url" text, "address" text, "phone" text)[0m
+  ↳ db/schema.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:47
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" text, "email" text, "permissions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:47
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (9.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190902210952)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190831001057),
+(20190831001327),
+(20190831001409),
+(20190902182022),
+(20190902194049);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (5.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-02 21:25:45.358321"], ["updated_at", "2019-09-02 21:25:45.358321"]]
+  ↳ db/schema.rb:13
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-09-02 21:25:45.366079"], ["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (6.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDistrict Create (5.4ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Seattle School District"], ["created_at", "2019-09-02 21:25:45.486504"], ["updated_at", "2019-09-02 21:25:45.486504"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (401.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "school_sites_development"[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (321.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "school_sites_test"[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1682.7ms)[0m  [1m[35mCREATE DATABASE "school_sites_development" ENCODING = 'unicode'[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1604.0ms)[0m  [1m[35mCREATE DATABASE "school_sites_test" ENCODING = 'unicode'[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (24.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8496546548085237075)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDistricts (20190831001057)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "districts" ("id" bigserial primary key, "name" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190831001057_create_districts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190831001057"]]
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateSchools (20190831001327)
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "schools" ("id" bigserial primary key, "name" text, "district_id" integer, "site_rep_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190831001327_create_schools.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190831001327"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190831001409)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" text, "email" text, "permissions" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190831001409_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190831001409"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEvents (20190902182022)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "name" text, "organizer_id" integer, "description" text, "eventable_type" character varying, "eventable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190902182022_create_events.rb:3
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_eventable_type_and_eventable_id" ON "events"  ("eventable_type", "eventable_id")[0m
+  ↳ db/migrate/20190902182022_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190902182022"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddApprovedToEvents (20190902194049)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "events" ADD "approved" boolean[0m
+  ↳ db/migrate/20190902194049_add_approved_to_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190902194049"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddAttrsToSchools (20190902210952)
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "schools" ADD "homepage_url" text[0m
+  ↳ db/migrate/20190902210952_add_attrs_to_schools.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "schools" ADD "address" text[0m
+  ↳ db/migrate/20190902210952_add_attrs_to_schools.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schools" ADD "phone" text[0m
+  ↳ db/migrate/20190902210952_add_attrs_to_schools.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schools" ADD "grade_level" text[0m
+  ↳ db/migrate/20190902210952_add_attrs_to_schools.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190902210952"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (8.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-02 21:26:35.673382"], ["updated_at", "2019-09-02 21:26:35.673382"]]
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8496546548085237075)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSchool Load (5.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" ORDER BY "schools"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDistrict Create (5.7ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Seattle School District"], ["created_at", "2019-09-02 21:26:55.909532"], ["updated_at", "2019-09-02 21:26:55.909532"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSchool Create (0.7ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Adams Elementary School"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.941218"], ["updated_at", "2019-09-02 21:26:55.941218"], ["homepage_url", "http://adamses.seattleschools.org/"], ["address", "6110 28th Ave NW Seattle, WA 98107"], ["phone", "206-252-1300"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Alki Elementary School"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.944400"], ["updated_at", "2019-09-02 21:26:55.944400"], ["homepage_url", "https://alkies.seattleschools.org/"], ["address", "3010  59th Ave SW Seattle, WA 98116"], ["phone", "206-252-9050"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Arbor Heights Elementary School"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.946665"], ["updated_at", "2019-09-02 21:26:55.946665"], ["homepage_url", "https://arborheightses.seattleschools.org/"], ["address", "3701 SW 104th Street, Seattle, WA 98146"], ["phone", "206-252-9250"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Daniel Bagley Elementary School"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.949721"], ["updated_at", "2019-09-02 21:26:55.949721"], ["homepage_url", "http://bagleyes.seattleschools.org/"], ["address", "7821 Stone Ave N Seattle, WA 98103"], ["phone", "206-252-5110"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Beacon Hill International Elementary School"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.953558"], ["updated_at", "2019-09-02 21:26:55.953558"], ["homepage_url", "https://beaconhilles.seattleschools.org/"], ["address", "2025  14th Ave S Seattle, WA 98144"], ["phone", "206-252-2700"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "William Cullen Bryant Elementary School"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.956013"], ["updated_at", "2019-09-02 21:26:55.956013"], ["homepage_url", "https://bryantes.seattleschools.org/"], ["address", "3311 NE 60th St Seattle, WA 98115"], ["phone", "206-252-5200"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cascadia Elementary School"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.958114"], ["updated_at", "2019-09-02 21:26:55.958114"], ["homepage_url", "http://cascadiaes.seattleschools.org/"], ["address", "1700 N 90th St Seattle, WA 98103"], ["phone", "206-413-2000"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:74
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cedar Park Elementary Schooloption"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.960163"], ["updated_at", "2019-09-02 21:26:55.960163"], ["homepage_url", "https://cedarparkes.seattleschools.org/"], ["address", "13224 37th Ave NE Seattle, WA 98125​"], ["phone", "206-252-4300"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:74
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:74
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:83
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Frantz H. Coe Elementary School"], ["district_id", 1], ["created_at", "2019-09-02 21:26:55.962343"], ["updated_at", "2019-09-02 21:26:55.962343"], ["homepage_url", "https://coees.seattleschools.org/"], ["address", "2424  7th Ave W Seattle, WA 98119"], ["phone", "206-252-2000"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:83
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:83
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mUser Create (5.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "permissions", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chris"], ["email", "c@email.com"], ["permissions", "admin"], ["created_at", "2019-09-02 21:26:55.973742"], ["updated_at", "2019-09-02 21:26:55.973742"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[36mSchool Load (7.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" ORDER BY "schools"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]

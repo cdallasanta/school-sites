@@ -13,7 +13,8 @@ School.create(
   district: ssd,
   address: "6110 28th Ave NW Seattle, WA 98107",
   phone: "206-252-1300",
-  homepage_url: "http://adamses.seattleschools.org/"
+  homepage_url: "http://adamses.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 School.create(
@@ -21,7 +22,8 @@ School.create(
   district: ssd,
   address: "3010  59th Ave SW Seattle, WA 98116",
   phone: "206-252-9050",
-  homepage_url: "https://alkies.seattleschools.org/"
+  homepage_url: "https://alkies.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 School.create(
@@ -29,7 +31,8 @@ School.create(
   address: "3701 SW 104th Street, Seattle, WA 98146",
   phone: "206-252-9250",
   district: ssd,
-  homepage_url: "https://arborheightses.seattleschools.org/"
+  homepage_url: "https://arborheightses.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 School.create(
@@ -37,7 +40,8 @@ School.create(
   address: "7821 Stone Ave N Seattle, WA 98103",
   phone: "206-252-5110",
   district: ssd,
-  homepage_url: "http://bagleyes.seattleschools.org/"
+  homepage_url: "http://bagleyes.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 School.create(
@@ -45,7 +49,8 @@ School.create(
   address: "2025  14th Ave S Seattle, WA 98144",
   phone: "206-252-2700",
   district: ssd,
-  homepage_url: "https://beaconhilles.seattleschools.org/"
+  homepage_url: "https://beaconhilles.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 School.create(
@@ -53,7 +58,8 @@ School.create(
   address: "3311 NE 60th St Seattle, WA 98115",
   phone: "206-252-5200",
   district: ssd,
-  homepage_url: "https://bryantes.seattleschools.org/"
+  homepage_url: "https://bryantes.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 School.create(
@@ -61,7 +67,8 @@ School.create(
   address: "1700 N 90th St Seattle, WA 98103",
   phone: "206-413-2000",
   district: ssd,
-  homepage_url: "http://cascadiaes.seattleschools.org/"
+  homepage_url: "http://cascadiaes.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 School.create(
@@ -69,7 +76,8 @@ School.create(
   address: "13224 37th Ave NE Seattle, WA 98125​",
   phone: "206-252-4300",
   district: ssd,
-  homepage_url: "https://cedarparkes.seattleschools.org/"
+  homepage_url: "https://cedarparkes.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 School.create(
@@ -77,7 +85,8 @@ School.create(
   address: "2424  7th Ave W Seattle, WA 98119",
   phone: "206-252-2000",
   district: ssd,
-  homepage_url: "https://coees.seattleschools.org/"
+  homepage_url: "https://coees.seattleschools.org/",
+  grade_level: "elementary"
 )
 
 # dummy user
