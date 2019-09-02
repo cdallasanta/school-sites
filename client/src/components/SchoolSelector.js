@@ -3,8 +3,8 @@ import React from 'react';
 class SchoolSelector extends React.Component {
   state = {
     district: null,
-    grade_level: null,
-    school_id: null
+    grade_level: "",
+    school_id: ""
   }
 
   componentDidMount(){
@@ -17,11 +17,14 @@ class SchoolSelector extends React.Component {
   }
 
   handleChange = e => {
-    this.setState({school_id: e.target.value})
+    this.setState({[e.target.name]: e.target.value})
   }
 
-  optionsForSelect = () => {
-    return this.state.district.schools.map((school, i) => {
+  schoolsForSelect = () => {
+    debugger;
+    const schools = this.state.district.schools.filter(s => s.grade_level === this.state.grade_level)
+
+    return schools.map((school, i) => {
       return <option value={school.id} key={i}>{school.name}</option>
     })
   }
@@ -31,17 +34,41 @@ class SchoolSelector extends React.Component {
     this.props.history.push(`/schools/${this.state.school_id}`)
   }
 
+  dropdownForm = () => {
+    return (
+      <form>
+        <div>
+          <label htmlFor="grade_level">Select grade level: </label>
+          <select value={this.state.grade_level} onChange={this.handleChange} name="grade_level">
+            <option value=""></option>
+            <option value="elementary">Elementary</option>
+            <option value="k-8">K-8</option>
+            <option value="middle">Middle</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+
+        {this.state.grade_level !== "" ?
+          <div>
+            <label htmlFor="school_id">Select your school: </label>
+            <select value={this.state.school_id} onChange={this.handleChange} name="school_id">
+              <option value=""></option>
+              {this.schoolsForSelect()}
+            </select>
+          </div>
+          :
+          null
+        }
+
+        <input type="submit" value="Select School" onClick={e=>this.handleSubmit(e)} />
+      </form>
+    )
+  }
+
   render(){
     let resp;
     if (this.state.district){
-      resp = 
-        <form>
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value={null}>Select your school</option>
-            {this.optionsForSelect()}
-          </select>
-          <input type="submit" value="Select School" onClick={e=>this.handleSubmit(e)} />
-        </form>
+      resp = this.dropdownForm();
     } else {
       resp = "Loading schools"
     }
