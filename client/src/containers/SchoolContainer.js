@@ -1,5 +1,9 @@
 import React from 'react';
 import NavigationMenu from '../components/NavigationMenu';
+import ContactInfo from '../components/ContactInfo';
+import Ad from '../components/Ad';
+import BlogList from '../containers/BlogList';
+import EventsList from '../containers/EventsList';
 
 class SchoolContainer extends React.Component {
   state = {
@@ -21,7 +25,12 @@ class SchoolContainer extends React.Component {
     } else {
       return (
         <div>
+          <h1>{this.state.school_data.name}</h1>
+          <ContactInfo />
+          <Ad size="banner" />
           <NavigationMenu />
+          <BlogList blogs={this.school_data.blogs} />
+          <EventsList eventss={this.school_data.eventss} />
         </div>
       )
     }
