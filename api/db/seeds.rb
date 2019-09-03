@@ -90,7 +90,7 @@ School.create(
   grade_level: "elementary"
 )
 
-# k-8 seeds
+# k-8 schools
 School.create(
   name: "Catharine Blaine",
   address: "2550 34th Ave W Seattle, WA 98199",
@@ -148,4 +148,14 @@ School.create(
 )
 
 # dummy user
-User.create(name:"Chris", email:"c@email.com", permissions:"admin")
+u = User.create(name:"Chris", email:"c@email.com", permissions:"admin")
+u.schools << Schools.find(0)
+u.avatar.attach(io: File.open('/test_avatars'), filename: '1.png')
+
+u = User.create(name:"Chukundi", email:"c@email.com", permissions:"admin")
+u.schools << Schools.find(1)
+u.avatar.attach(io: File.open('/test_avatars'), filename: '2.jpg')
+
+User.create(name:"Jeron", email:"j@email.com", permissions:"admin")
+u.schools << Schools.find(2)
+u.avatar.attach(io: File.open('/test_avatars'), filename: '3.jpg')
