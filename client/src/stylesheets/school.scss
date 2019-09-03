@@ -11,6 +11,15 @@
 div{
   border: 1px solid red;
 }
+#contact-div {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  * {
+    align-self: center;
+  }
+}
 
 #header {
   grid-area: header;

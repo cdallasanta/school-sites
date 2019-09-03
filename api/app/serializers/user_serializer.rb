@@ -8,6 +8,7 @@ class UserSerializer < ActiveModel::Serializer
   has_many :blogs, foreign_key: :author_id
 
   def avatar_url
-    rails_representation_url(object.avatar, only_path: true)
+    variant = object.avatar.variant(resize: "100x100")
+    return url_for(variant)
   end
 end
