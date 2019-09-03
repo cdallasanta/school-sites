@@ -1,0 +1,42 @@
+#school-page {
+  display: grid;
+  grid-template-columns: auto .3fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+  "header header"
+  "conntent sidebar"
+  "footer footer";
+}
+
+div{
+  border: 1px solid red;
+}
+
+header {
+  grid-area: header;
+}
+
+#sidebar {
+  grid-area: sidebar;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+
+/* ad styling */
+.chunk {
+  background: lightblue;
+}
+
+.panel-chunk {
+  width: 300px;
+  height: 250px;
+}
+
+.banner-chunk {
+  width: 728px;
+  height: 90px;
+
+}

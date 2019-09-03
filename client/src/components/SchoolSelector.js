@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/school.css'
 
 class SchoolSelector extends React.Component {
   state = {

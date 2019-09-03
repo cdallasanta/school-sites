@@ -25,15 +25,21 @@ class SchoolContainer extends React.Component {
       return "Loading school data"
     } else {
       return (
-        <div>
-          <h1>{this.state.school_data.name}</h1>
-          <ContactInfo contact={this.state.school_data.site_rep} />
-          <Ad size="banner" />
-          <NavigationMenu />
-          <BlogList blogs={this.state.school_data.blogs} />
-          <EventsList events={this.state.school_data.events} />
-          <Ad size="panel" />
-          <Ad size="panel" />
+        <div id="school-page">
+          <header>
+            <h1>{this.state.school_data.name}</h1>
+            <ContactInfo contact={this.state.school_data.site_rep} />
+            <Ad size="banner" />
+          </header>
+          <div id="sidebar">
+            <NavigationMenu />
+            <Ad size="panel" />
+            <Ad size="panel" />
+          </div>
+          <content>
+            <BlogList blogs={this.state.school_data.blogs} />
+            <EventsList events={this.state.school_data.events} />
+          </content>
           <Footer />
         </div>
       )
