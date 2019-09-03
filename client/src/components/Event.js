@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Event = props => {
-  return null
+  return (
+    <div>
+      {props.title}
+    </div>
+  )
 }
 
 export default Event;

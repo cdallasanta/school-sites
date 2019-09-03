@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Ad = props => {
+const Ad = ({size}) => {
   return(
-    <div>
-      Ad
+    <div className={`chunk ${size}-chunk`}>
+      {size} Ad
     </div>
   )
 }

@@ -9,7 +9,12 @@ class BlogList extends React.Component {
   }
 
   render(){
-    return this.renderBlogs()
+    return (
+      <div>
+        <h3>Blogs</h3>
+        {this.renderBlogs()}
+      </div>
+    )
   }
 }
 

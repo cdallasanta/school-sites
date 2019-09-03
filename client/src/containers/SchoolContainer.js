@@ -2,6 +2,7 @@ import React from 'react';
 import NavigationMenu from '../components/NavigationMenu';
 import ContactInfo from '../components/ContactInfo';
 import Ad from '../components/Ad';
+import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
 
@@ -26,11 +27,14 @@ class SchoolContainer extends React.Component {
       return (
         <div>
           <h1>{this.state.school_data.name}</h1>
-          <ContactInfo />
+          <ContactInfo contact={this.state.school_data.site_rep} />
           <Ad size="banner" />
           <NavigationMenu />
-          <BlogList blogs={this.school_data.blogs} />
-          <EventsList eventss={this.school_data.eventss} />
+          <BlogList blogs={this.state.school_data.blogs} />
+          <EventsList events={this.state.school_data.events} />
+          <Ad size="panel" />
+          <Ad size="panel" />
+          <Footer />
         </div>
       )
     }
