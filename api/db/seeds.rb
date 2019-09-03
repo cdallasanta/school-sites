@@ -149,13 +149,14 @@ School.create(
 
 # dummy user
 u = User.create(name:"Chris", email:"c@email.com", permissions:"admin")
-u.schools << Schools.find(0)
-u.avatar.attach(io: File.open('/test_avatars'), filename: '1.png')
+u.schools << School.find(1)
+binding.pry
+u.avatar.attach(io: File.open('/'), filename: '1.png')
 
 u = User.create(name:"Chukundi", email:"c@email.com", permissions:"admin")
-u.schools << Schools.find(1)
-u.avatar.attach(io: File.open('/test_avatars'), filename: '2.jpg')
+u.schools << School.find(2)
+u.avatar.attach(io: File.open('/'), filename: '2.jpg')
 
 User.create(name:"Jeron", email:"j@email.com", permissions:"admin")
-u.schools << Schools.find(2)
-u.avatar.attach(io: File.open('/test_avatars'), filename: '3.jpg')
+u.schools << School.find(3)
+u.avatar.attach(io: File.open('/'), filename: '3.jpg')
