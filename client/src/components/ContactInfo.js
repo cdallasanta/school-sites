@@ -10,9 +10,10 @@ const ContactInfo = ({contact}) => {
   }
 
   function contactDiv() {
+    debugger;
     return (
       <div>
-        <img src="" alt="rep-avatar" />
+        <img src={contact.avatar_url} alt="rep-avatar" />
         <strong>Rep Name:</strong> {contact.name}<br />
         <strong>Rep Email:</strong> {contact.email}
       </div>
