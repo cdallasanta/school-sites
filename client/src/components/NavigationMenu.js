@@ -3,12 +3,11 @@ import {Link} from 'react-router-dom';
 
 const NavigationMenu = props => {
   function toggleContact() {
-    console.log("here")
     const content = document.getElementById("nav-contact")
-    if (content.style.display === "block") {
-      content.style.display = "none";
+    if (content.classList.value === "collapsible expanded") {
+      content.classList.value = "collapsible collapsed"
     } else {
-      content.style.display = "block";
+      content.classList.value = "collapsible expanded"
     }
   }
 
@@ -18,7 +17,7 @@ const NavigationMenu = props => {
       <Link to={`/districts/${props.district_id}`}>District Page</Link><br />
       <Link to={`/districts/${props.district_id}/calendar`}>District Calendar</Link><br />
       <a href="#" onClick={toggleContact}>School Info</a><br />
-      <div id="nav-contact" className="collapsible">
+      <div id="nav-contact" className="collapsible collapsed">
         Phone: {props.school.phone}<br />
         Address: {props.school.address}<br />
         <a href={props.school.homepage_url}>Homepage</a>

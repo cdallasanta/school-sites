@@ -11,6 +11,7 @@
 div{
   border: 1px solid red;
 }
+
 #contact-div {
   display: flex;
   justify-content: center;
@@ -32,10 +33,20 @@ div{
 
 #sidebar {
   grid-area: sidebar;
+}
 
-  #nav-contact{
-    display: none;
-  }
+.collapsible {
+  background: lightcoral;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible.collapsed{
+  max-height: 0;
+}
+
+.collapsible.expanded{
+  max-height: null;
 }
 
 #footer {
