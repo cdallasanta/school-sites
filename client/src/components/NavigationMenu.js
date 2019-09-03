@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom';
 const NavigationMenu = props => {
   function toggleContact() {
     const content = document.getElementById("nav-contact")
-    if (content.classList.value === "collapsible expanded") {
-      content.classList.value = "collapsible collapsed"
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
     } else {
-      content.classList.value = "collapsible expanded"
-    }
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
   }
 
   return(
@@ -20,7 +20,7 @@ const NavigationMenu = props => {
       <div id="nav-contact" className="collapsible collapsed">
         Phone: {props.school.phone}<br />
         Address: {props.school.address}<br />
-        <a href={props.school.homepage_url}>Homepage</a>
+        <a href={props.school.homepage_url} target="_">Homepage</a>
       </div>
     </div>
   )

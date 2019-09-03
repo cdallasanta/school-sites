@@ -6,10 +6,9 @@
   "header header"
   "conntent sidebar"
   "footer footer";
-}
 
-div{
-  border: 1px solid red;
+  background: lightblue;
+  min-height: 100vh;
 }
 
 #contact-div {
@@ -25,6 +24,8 @@ div{
 #header {
   grid-area: header;
   text-align: center;
+  background: darkblue;
+  color: white;
 
   .chunk {
     display:inline-block;
@@ -33,20 +34,14 @@ div{
 
 #sidebar {
   grid-area: sidebar;
+  margin: 10px 0px;
 }
+
 
 .collapsible {
-  background: lightcoral;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-}
-
-.collapsible.collapsed{
   max-height: 0;
-}
-
-.collapsible.expanded{
-  max-height: null;
 }
 
 #footer {
@@ -56,7 +51,8 @@ div{
 
 /* ad styling */
 .chunk {
-  background: lightblue;
+  background: lightcoral;
+  margin: 5px;
 }
 
 .panel-chunk {
@@ -67,5 +63,4 @@ div{
 .banner-chunk {
   width: 728px;
   height: 90px;
-
 }
