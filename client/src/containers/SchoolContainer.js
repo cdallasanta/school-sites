@@ -26,7 +26,7 @@ class SchoolContainer extends React.Component {
     } else {
       return (
         <div id="school-page">
-          <header>
+          <header id="header">
             <h1>{this.state.school_data.name}</h1>
             <ContactInfo contact={this.state.school_data.site_rep} />
             <Ad size="banner" />
