@@ -5931,3 +5931,226 @@ Processing by API::UsersController#show as HTML
 Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 4.5ms)
 
 
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:19:15 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+Completed 204 No Content in 24ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:20:33 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:20:41 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/users/4/avatar" for ::1 at 2019-09-02 18:22:07 -0700
+Processing by API::UsersController#avatar as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:22
+  [1m[36mActiveStorage::Attachment Load (15.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:24
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:24
+Redirected to http://localhost:3001/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f5c2c3f4ea155ad1d3617ada45d4fea3fcb01c0f/avatar.png
+Completed 302 Found in 247ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f5c2c3f4ea155ad1d3617ada45d4fea3fcb01c0f/avatar.png" for ::1 at 2019-09-02 18:22:07 -0700
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f5c2c3f4ea155ad1d3617ada45d4fea3fcb01c0f", "filename"=>"avatar"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: b96r18CYrXgV5XUXTatqSZPG (http://localhost:3001/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZamsyY2pFNFExbHlXR2RXTlZoVldGUmhkSEZUV2xCSEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuWVhaaGRHRnlMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAxOS0wOS0wM1QwMToyNzowNy41MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1b9d4699db5525c51ad3da33dd2e630d09cffeb1/avatar.png?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.png%22%3B+filename%2A%3DUTF-8%27%27avatar.png)[0m
+Redirected to http://localhost:3001/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZamsyY2pFNFExbHlXR2RXTlZoVldGUmhkSEZUV2xCSEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuWVhaaGRHRnlMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAxOS0wOS0wM1QwMToyNzowNy41MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1b9d4699db5525c51ad3da33dd2e630d09cffeb1/avatar.png?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.png%22%3B+filename%2A%3DUTF-8%27%27avatar.png
+Completed 302 Found in 324ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZamsyY2pFNFExbHlXR2RXTlZoVldGUmhkSEZUV2xCSEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuWVhaaGRHRnlMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAxOS0wOS0wM1QwMToyNzowNy41MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1b9d4699db5525c51ad3da33dd2e630d09cffeb1/avatar.png?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22avatar.png%22%3B+filename%2A%3DUTF-8%27%27avatar.png" for ::1 at 2019-09-02 18:22:07 -0700
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"avatar.png\"; filename*=UTF-8''avatar.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRZamsyY2pFNFExbHlXR2RXTlZoVldGUmhkSEZUV2xCSEJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSS9hVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZWFpoZEdGeUxuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuWVhaaGRHRnlMbkJ1WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAxOS0wOS0wM1QwMToyNzowNy41MTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--1b9d4699db5525c51ad3da33dd2e630d09cffeb1", "filename"=>"avatar"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:22:37 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (160.26ms)
+Completed 200 OK in 264ms (Views: 206.6ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:22:55 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (26.43ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:25:18 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (15762.45ms)
+Completed 200 OK in 15835ms (Views: 15795.9ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:25:39 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (206.52ms)
+Completed 200 OK in 273ms (Views: 234.7ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:26:06 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ (byebug):1
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ (byebug):1
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:28:06 -0700
+[active_model_serializers]   [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (119386.11ms)
+Completed 200 OK in 119509ms (Views: 119404.7ms | ActiveRecord: 22.4ms)
+
+
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:11
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:11
+[active_model_serializers]   [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (580.38ms)
+Completed 200 OK in 646ms (Views: 608.7ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/api/users/4" for ::1 at 2019-09-02 18:28:11 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:11
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:11
+[active_model_serializers]   [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (246.57ms)
+Completed 200 OK in 322ms (Views: 298.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/users/7" for ::1 at 2019-09-02 18:28:29 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+Completed 404 Not Found in 90ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=7):
+  
+app/controllers/api/users_controller.rb:17:in `show'
+Started GET "/api/users/6" for ::1 at 2019-09-02 18:28:32 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+Completed 404 Not Found in 70ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=6):
+  
+app/controllers/api/users_controller.rb:17:in `show'
+Started GET "/api/users/5" for ::1 at 2019-09-02 18:28:36 -0700
+Processing by API::UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:11
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:11
+[active_model_serializers]   [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."site_rep_id" = $1[0m  [["site_rep_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."organizer_id" = $1[0m  [["organizer_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."author_id" = $1[0m  [["author_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/users_controller.rb:17
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (658.49ms)
+Completed 200 OK in 679ms (Views: 658.5ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" ORDER BY "schools"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSchool Update (0.7ms)[0m  [1m[33mUPDATE "schools" SET "site_rep_id" = $1, "updated_at" = $2 WHERE "schools"."id" = $3[0m  [["site_rep_id", 5], ["updated_at", "2019-09-03 01:29:07.361053"], ["id", 1]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m

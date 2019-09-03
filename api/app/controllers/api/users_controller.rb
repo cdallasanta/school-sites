@@ -14,8 +14,7 @@ class API::UsersController < ApplicationController
   end
   
   def show
-    @user = User.all.last
-    render 'users/show'
+    render json: User.find(params[:id])
   end
 
   def avatar
