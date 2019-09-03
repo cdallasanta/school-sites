@@ -1,7 +1,7 @@
 #school-page {
   display: grid;
   grid-template-columns: auto 0fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 0fr auto 0fr;
   grid-template-areas: 
   "header header"
   "conntent sidebar"
@@ -18,12 +18,15 @@ div{
 
   .chunk {
     display:inline-block;
-    border: 5ps solid green;
   }
 }
 
 #sidebar {
   grid-area: sidebar;
+
+  #nav-contact{
+    display: none;
+  }
 }
 
 #footer {

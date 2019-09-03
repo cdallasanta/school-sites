@@ -1,5 +1,5 @@
 import React from 'react';
-import './stylesheets/App.css';
+import './stylesheets/App.scss';
 import { BrowserRouter, Route } from "react-router-dom";
 import SchoolSelector from './components/SchoolSelector';
 import SchoolContainer from './containers/SchoolContainer';
@@ -12,7 +12,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Route exact path="/" component={SchoolSelector} />
           <Route exact path="/districts/:id/selector" component={SchoolSelector} />
-          <Route exact path="/schools/:id" component={SchoolContainer} />
+          <Route exact path="/districts/:id/schools/:id" component={SchoolContainer} />
           <Route exact path="/districts/:id" component={DistrictContainer} />
         </BrowserRouter>
       </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../stylesheets/school.css'
 
 class SchoolSelector extends React.Component {
   state = {
@@ -32,7 +31,7 @@ class SchoolSelector extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     if (this.state.school_id){
-      this.props.history.push(`/schools/${this.state.school_id}`)
+      this.props.history.push(`/districts/${this.state.district.id}/schools/${this.state.school_id}`)
     }
   }
 

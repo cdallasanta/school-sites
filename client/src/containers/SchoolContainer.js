@@ -5,6 +5,7 @@ import Ad from '../components/Ad';
 import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
+import '../stylesheets/school.scss'
 
 class SchoolContainer extends React.Component {
   state = {
@@ -32,7 +33,9 @@ class SchoolContainer extends React.Component {
             <Ad size="banner" />
           </header>
           <div id="sidebar">
-            <NavigationMenu />
+            <NavigationMenu
+              school={this.state.school_data}
+              district_id={this.state.school_data.district.id} />
             <Ad size="panel" />
             <Ad size="panel" />
           </div>
