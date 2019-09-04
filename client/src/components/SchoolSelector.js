@@ -12,7 +12,6 @@ class SchoolSelector extends React.Component {
     fetch(`http://localhost:3001/api/districts/${dist_id}/schools`)
       .then(resp => resp.json())
       .then(data => {
-        debugger;
         this.setState({schools: data});
       })
   }
@@ -31,8 +30,9 @@ class SchoolSelector extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const dist_id = this.props.match.params.id
     if (this.state.school_id){
-      this.props.history.push(`/districts/${this.state.district.id}/schools/${this.state.school_id}`)
+      this.props.history.push(`/districts/${dist_id}/schools/${this.state.school_id}`)
     }
   }
 

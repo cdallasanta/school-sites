@@ -1,6 +1,6 @@
 class API::SchoolsController < ApplicationController
   def index
-    render json: School.where(district_id: params[:district_id]).to_json(only: [:id, :name, :grade_level])
+    render json: School.where(district_id: params[:district_id]).order(:name).to_json(only: [:id, :name, :grade_level])
   end
 
   def show
