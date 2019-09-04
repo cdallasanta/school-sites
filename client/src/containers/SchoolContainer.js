@@ -5,6 +5,7 @@ import Ad from '../components/Ad';
 import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
+import SchoolSelector from '../components/SchoolSelector';
 import '../stylesheets/school.scss'
 
 class SchoolContainer extends React.Component {
@@ -22,6 +23,18 @@ class SchoolContainer extends React.Component {
       })
   }
 
+  componentDidUpdate(prevProps) {
+    if (this.props.match.params.school_id !== prevProps.match.params.school_id) {
+      const dist_id = this.props.match.params.dist_id
+      const school_id = this.props.match.params.school_id
+      fetch(`http://localhost:3001/api/districts/${dist_id}/schools/${school_id}`)
+        .then(resp => resp.json())
+        .then(data => {
+          this.setState({school_data: data});
+        })
+    }
+   }
+
   loadedResponse = () => {
     if (!this.state.school_data){
       return "Loading school data"
@@ -37,6 +50,7 @@ class SchoolContainer extends React.Component {
             <NavigationMenu
               school={this.state.school_data}
               district_id={this.state.school_data.district.id} />
+            <SchoolSelector schools={this.state.school_data.district.schools} dist_id={this.state.school_data.district.id} history={this.props.history}/>
             <Ad size="panel" />
             <Ad size="panel" />
           </div>

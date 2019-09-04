@@ -1,19 +1,24 @@
 import React from 'react';
 
 class SchoolSelector extends React.Component {
-  state = {
-    schools: null,
-    grade_level: "",
-    school_id: ""
+  constructor(props){
+    super(props)
+    this.state = {
+      schools: props.schools,
+      grade_level: "",
+      school_id: ""
+    }
   }
 
   componentDidMount(){
-    const dist_id = this.props.match.params.dist_id
-    fetch(`http://localhost:3001/api/districts/${dist_id}/schools`)
-      .then(resp => resp.json())
-      .then(data => {
-        this.setState({schools: data});
-      })
+    if (!this.state.schools){
+      const dist_id = this.props.dist_id
+      fetch(`http://localhost:3001/api/districts/${dist_id}/schools`)
+        .then(resp => resp.json())
+        .then(data => {
+          this.setState({schools: data});
+        })
+    }
   }
 
   handleChange = e => {
@@ -30,15 +35,14 @@ class SchoolSelector extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const dist_id = this.props.match.params.dist_id
     if (this.state.school_id){
-      this.props.history.push(`/districts/${dist_id}/schools/${this.state.school_id}`)
+      this.props.history.push(`/districts/${this.props.dist_id}/schools/${this.state.school_id}`)
     }
   }
 
   dropdownForm = () => {
     return (
-      <form>
+      <form id="school-selector">
         <div>
           <label htmlFor="grade_level">Select grade level: </label>
           <select value={this.state.grade_level} onChange={this.handleChange} name="grade_level">

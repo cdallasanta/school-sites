@@ -13,7 +13,6 @@ const NavigationMenu = props => {
 
   return(
     <div id="navMenu">
-      <Link to={`/districts/${props.district_id}/selector`}>Select a different School</Link><br />
       <Link to={`/districts/${props.district_id}`}>District Page</Link><br />
       <Link to={`/districts/${props.district_id}/calendar`}>District Calendar</Link><br />
       <button 

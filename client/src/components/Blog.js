@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Blog = ({blog}) => {
-  debugger;
   return (
     <div className="blog-card">
       <div className="blog-title">
