@@ -2,21 +2,21 @@ import React from 'react';
 import Blog from '../components/Blog'
 import '../stylesheets/blogs.scss'
 
-class BlogList extends React.Component {
-  renderBlogs = () => {
-    return this.props.blogs.map(b => {
-      return <Blog blog={b} />
+const BlogList = ({blogs}) => {
+  function renderBlogs() {
+    return blogs.map((b, i) => {
+      return <Blog blog={b} key={i} />
     })
   }
 
-  render(){
-    return (
+  return (
+    <div id="blogs-section">
+      <h3>Blogs</h3>
       <div id="blogs-div">
-        <h3>Blogs</h3>
-        {this.renderBlogs()}
+        {renderBlogs()}
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default BlogList;

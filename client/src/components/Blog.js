@@ -1,9 +1,15 @@
 import React from 'react';
 
-const Blog = props => {
+const Blog = ({blog}) => {
+  debugger;
   return (
-    <div>
-      {props.title}
+    <div className="blog-card">
+      <div className="blog-title">
+        {blog.title}
+      </div>
+      <div className="blog-teaser">
+        {blog.content}
+      </div>
     </div>
   )
 }

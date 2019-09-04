@@ -2,21 +2,21 @@ import React from 'react';
 import Event from '../components/Event';
 import '../stylesheets/events.scss'
 
-class EventsList extends React.Component {
-  renderEvents = () => {
-    return this.props.events.map((e, i) => {
+const EventsList = ({events}) => {
+  function renderEvents() {
+    return events.map((e, i) => {
       return <Event event={e} key={i} />
     })
   }
 
-  render(){
-    return (
+  return (
+    <div id="events-section">
+      <h3>Events</h3>
       <div id="events-div">
-        <h3>Events</h3>
-        {this.renderEvents()}
+        {renderEvents()}
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default EventsList;

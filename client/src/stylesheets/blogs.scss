@@ -1,7 +1,17 @@
 #blogs-div{
   grid-area: blogs;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   justify-items: flex-start;
+}
+
+.blog-card{
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  background: lavenderblush;
+  margin: 3px;
 }
