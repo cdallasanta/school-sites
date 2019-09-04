@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 2019_09_03_005746) do
   create_table "events", force: :cascade do |t|
     t.text "title"
     t.integer "organizer_id"
-    t.date "start"
-    t.date "end"
+    t.datetime "start"
+    t.datetime "end"
     t.text "description"
     t.boolean "approved"
     t.boolean "allDay"

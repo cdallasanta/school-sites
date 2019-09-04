@@ -3,8 +3,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
     create_table :events do |t|
       t.text :title
       t.integer :organizer_id
-      t.date :start
-      t.date :end
+      t.datetime :start
+      t.datetime :end
       t.text :description
       t.boolean :approved
       t.boolean :allDay
