@@ -5,12 +5,16 @@ class SchoolSerializer < ActiveModel::Serializer
 
   belongs_to :district
   def site_rep
-    variant = object.site_rep.avatar.variant(resize: "100x100")
-    return {
-      name: object.site_rep.name,
-      email: object.site_rep.email,
-      avatar_url: url_for(variant)
-    }
+    if object.site_rep
+      variant = object.site_rep.avatar.variant(resize: "100x100")
+      return {
+        name: object.site_rep.name,
+        email: object.site_rep.email,
+        avatar_url: url_for(variant)
+      }
+    else
+      return nil
+    end
   end
 
   def blogs
