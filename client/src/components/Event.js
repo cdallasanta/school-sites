@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/events.scss'
 
 const Event = ({event}) => {
   const eventStart = new Date(event.start);
@@ -8,13 +9,22 @@ const Event = ({event}) => {
   const dateString = eventStart.toLocaleString('default', { weekday: 'long' })
 
   return (
-    <div className="event-div">
-      <div className="event-date">
-        {eventStart.toLocaleString('default', { month: 'short' })}, 
-        {eventStart.getDate()}
+    <div className="event-card">
+      <div className="event-big-date">
+        <div className="month">
+          {shortMonth}
+        </div>
+        <div className="date">
+          {dateNumber}
+        </div>
       </div>
-      <div className="">
-        {event.title}: {dateString}, {longMonth} {dateNumber}
+      <div className="event-details">
+        <div className="event-title">
+          {event.title}
+        </div>
+        <div className="event-full-date">
+          {dateString}, {longMonth} {dateNumber}
+        </div>
       </div>
     </div>
   )
