@@ -1,4 +1,9 @@
 import React from 'react';
+import Ad from '../components/Ad';
+import Footer from '../components/Footer';
+import BlogList from '../containers/BlogList';
+import EventsList from '../containers/EventsList';
+import '../stylesheets/district.scss'
 
 class DistrictContainer extends React.Component {
   state = {
@@ -14,18 +19,33 @@ class DistrictContainer extends React.Component {
       })
   }
 
-  render(){
-    let resp;
-    if (this.state.district_data){
-      resp = this.state.district_data.name
+  loadedResponse = () => {
+    if (!this.state.district_data){
+      return "Loading District data"
     } else {
-      resp = "Loading district data"
+      return (
+        <div id="district-page">
+          <header id="header">
+            <h1>{this.state.district_data.name}</h1>
+            <Ad size="banner" />
+          </header>
+          <div id="sidebar">
+            <Ad size="panel" />
+            <Ad size="panel" />
+          </div>
+          <content>
+            <BlogList blogs={this.state.district_data.blogs} />
+            <EventsList events={this.state.district_data.events} />
+          </content>
+          <Footer />
+        </div>
+      )
     }
-    
+  }
+
+  render(){
     return (
-      <div>
-        {resp}
-      </div>
+      this.loadedResponse()
     )
   }
 }

@@ -16,10 +16,15 @@ const NavigationMenu = props => {
       <Link to={`/districts/${props.district_id}/selector`}>Select a different School</Link><br />
       <Link to={`/districts/${props.district_id}`}>District Page</Link><br />
       <Link to={`/districts/${props.district_id}/calendar`}>District Calendar</Link><br />
-      <a href="#" onClick={toggleContact}>School Info</a><br />
+      <button 
+        type="button"
+        className="link-button"
+        onClick={toggleContact}>
+          School Info
+        </button><br />
       <div id="nav-contact" className="collapsible collapsed">
-        Phone: {props.school.phone}<br />
-        Address: {props.school.address}<br />
+        <strong>Phone: </strong>{props.school.phone}<br />
+        <strong>Address: </strong>{props.school.address}<br />
         <a href={props.school.homepage_url} target="_">Homepage</a>
       </div>
     </div>

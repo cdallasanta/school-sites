@@ -1,4 +1,4 @@
-#school-page {
+#district-page {
   display: grid;
   grid-template-columns: auto 0fr;
   grid-template-rows: 0fr auto 0fr;
@@ -35,16 +35,6 @@
 #sidebar {
   grid-area: sidebar;
   margin: 10px 0px;
-
-  .link-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-    display: inline;
-    margin: 0;
-    padding: 0;
-  }
 }
 
 .collapsible {
