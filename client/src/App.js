@@ -11,9 +11,9 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
           <Route exact path="/" component={SchoolSelector} />
-          <Route exact path="/districts/:id/selector" component={SchoolSelector} />
-          <Route exact path="/districts/:id/schools/:id" component={SchoolContainer} />
-          <Route exact path="/districts/:id" component={DistrictContainer} />
+          <Route exact path="/districts/:dist_id/selector" component={SchoolSelector} />
+          <Route exact path="/districts/:dist_id/schools/:school_id" component={SchoolContainer} />
+          <Route exact path="/districts/:dist_id" component={DistrictContainer} />
         </BrowserRouter>
       </div>
     );

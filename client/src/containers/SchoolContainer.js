@@ -13,8 +13,9 @@ class SchoolContainer extends React.Component {
   }
 
   componentDidMount(){
-    const school_id = this.props.match.params.id
-    fetch(`http://localhost:3001/api/schools/${school_id}`)
+    const dist_id = this.props.match.params.dist_id
+    const school_id = this.props.match.params.school_id
+    fetch(`http://localhost:3001/api/districts/${dist_id}/schools/${school_id}`)
       .then(resp => resp.json())
       .then(data => {
         this.setState({school_data: data});

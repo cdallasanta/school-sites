@@ -8,7 +8,7 @@ class SchoolSelector extends React.Component {
   }
 
   componentDidMount(){
-    const dist_id = this.props.match.params.id
+    const dist_id = this.props.match.params.dist_id
     fetch(`http://localhost:3001/api/districts/${dist_id}/schools`)
       .then(resp => resp.json())
       .then(data => {
@@ -30,7 +30,7 @@ class SchoolSelector extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const dist_id = this.props.match.params.id
+    const dist_id = this.props.match.params.dist_id
     if (this.state.school_id){
       this.props.history.push(`/districts/${dist_id}/schools/${this.state.school_id}`)
     }
