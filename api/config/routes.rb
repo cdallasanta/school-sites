@@ -5,7 +5,9 @@ Rails.application.routes.draw do
       get :avatar, on: :member
     end
 
-    resources :schools
-    resources :districts
+    # resources :schools
+    resources :districts do
+      resources :schools
+    end
   end
 end

@@ -73,7 +73,7 @@ School.create(
 )
 
 School.create(
-  name: "Cedar Park Elementary Schooloption",
+  name: "Cedar Park Elementary School",
   address: "13224 37th Ave NE Seattle, WA 98125​",
   phone: "206-252-4300",
   district: ssd,
