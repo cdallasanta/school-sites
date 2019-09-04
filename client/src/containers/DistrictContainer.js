@@ -33,10 +33,8 @@ class DistrictContainer extends React.Component {
             <Ad size="panel" />
             <Ad size="panel" />
           </div>
-          <content>
-            <BlogList blogs={this.state.district_data.blogs} />
-            <EventsList events={this.state.district_data.events} />
-          </content>
+          <BlogList blogs={this.state.district_data.blogs} />
+          <EventsList events={this.state.district_data.events} />
           <Footer />
         </div>
       )

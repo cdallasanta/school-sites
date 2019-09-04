@@ -40,10 +40,8 @@ class SchoolContainer extends React.Component {
             <Ad size="panel" />
             <Ad size="panel" />
           </div>
-          <content>
-            <BlogList blogs={this.state.school_data.blogs} />
-            <EventsList events={this.state.school_data.events} />
-          </content>
+          <BlogList blogs={this.state.school_data.blogs} />
+          <EventsList events={this.state.school_data.events} />
           <Footer />
         </div>
       )
