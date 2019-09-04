@@ -147,7 +147,7 @@ School.create(
   grade_level: "high"
 )
 
-# dummy user
+# users
 u = User.create(name:"Chris", email:"c@email.com", permissions:"admin")
 u.schools << School.find(1)
 u.avatar.attach(io: File.open(Rails.root.join('test_avatars/1.png')), filename: '1.png')
@@ -159,3 +159,12 @@ u.avatar.attach(io: File.open(Rails.root.join('test_avatars/2.jpg')), filename: 
 u = User.create(name:"Jeron", email:"j@email.com", permissions:"admin")
 u.schools << School.find(3)
 u.avatar.attach(io: File.open(Rails.root.join('test_avatars/3.jpg')), filename: '3.jpg')
+
+# events
+Event.create(eventable:District.find(1), title:"District Event", organizer_id:1, allDay: false, start:Time.parse("Sept 8 2019 10:19"), end:Time.parse("Sept 8 2019 11:19"))
+
+Event.create(eventable:School.find(1), title:"School Event", organizer_id:1, allDay: false, start:Time.parse("Sept 10 2019 10:19"), end:Time.parse("Sept 11 2019 11:19"))
+
+#blogs
+Blog.create(blogable:District.find(1), title:"District Blog", author_id:1, content: "Lorem Ipsum")
+Blog.create(blogable:School.find(1), title:"School Blog", author_id:1, content: "Lorem Ipsum")
