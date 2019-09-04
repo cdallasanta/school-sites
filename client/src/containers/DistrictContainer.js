@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
 import SchoolSelector from '../components/SchoolSelector';
-import '../stylesheets/district.scss'
 
 class DistrictContainer extends React.Component {
   state = {

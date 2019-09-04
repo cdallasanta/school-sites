@@ -10,8 +10,8 @@ class SchoolSelector extends React.Component {
     }
   }
 
-  componentDidMount(){
-    if (!this.state.schools){
+  componentDidUpdate(prevProps) {
+    if (this.props.dist_id !== prevProps.dist_id){
       const dist_id = this.props.dist_id
       fetch(`http://localhost:3001/api/districts/${dist_id}/schools`)
         .then(resp => resp.json())

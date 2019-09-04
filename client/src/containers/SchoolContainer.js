@@ -6,11 +6,16 @@ import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
 import SchoolSelector from '../components/SchoolSelector';
-import '../stylesheets/school.scss'
 
 class SchoolContainer extends React.Component {
   state = {
-    school_data: null
+    school_data: {
+      name: "",
+      blogs: [],
+      events: [],
+      site_rep: "",
+      district: {id:""}
+    }
   }
 
   componentDidMount(){
@@ -33,38 +38,28 @@ class SchoolContainer extends React.Component {
           this.setState({school_data: data});
         })
     }
-   }
-
-  loadedResponse = () => {
-    if (!this.state.school_data){
-      return "Loading school data"
-    } else {
-      return (
-        <div id="school-page">
-          <header id="header">
-            <h1>{this.state.school_data.name}</h1>
-            <ContactInfo contact={this.state.school_data.site_rep} />
-            <Ad size="banner" />
-          </header>
-          <div id="sidebar">
-            <NavigationMenu
-              school={this.state.school_data}
-              district_id={this.state.school_data.district.id} />
-            <SchoolSelector schools={this.state.school_data.district.schools} dist_id={this.state.school_data.district.id} history={this.props.history}/>
-            <Ad size="panel" />
-            <Ad size="panel" />
-          </div>
-          <BlogList blogs={this.state.school_data.blogs} />
-          <EventsList events={this.state.school_data.events} />
-          <Footer />
-        </div>
-      )
-    }
   }
 
   render(){
     return (
-      this.loadedResponse()
+      <div id="school-page">
+        <header id="header">
+          <h1>{this.state.school_data.name}</h1>
+          <ContactInfo contact={this.state.school_data.site_rep} />
+          <Ad size="banner" />
+        </header>
+        <div id="sidebar">
+          <NavigationMenu
+            school={this.state.school_data}
+            district_id={this.state.school_data.district.id} />
+          <SchoolSelector schools={this.state.school_data.district.schools} dist_id={this.state.school_data.district.id} history={this.props.history}/>
+          <Ad size="panel" />
+          <Ad size="panel" />
+        </div>
+        <BlogList blogs={this.state.school_data.blogs} />
+        <EventsList events={this.state.school_data.events} />
+        <Footer />
+      </div>
     )
   }
 }
