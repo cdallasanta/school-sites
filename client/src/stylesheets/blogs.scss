@@ -3,9 +3,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  justify-items: flex-start;
 }
 
 .blog-card{
@@ -13,5 +12,5 @@
   width: 200px;
   height: 200px;
   background: lavenderblush;
-  margin: 3px;
+  margin: 5px;
 }

@@ -20,7 +20,8 @@
 
   .event-big-date {
     height: 80px;
-    background: grey;
+    background: darkslategray;
+    color: white;
     width: 80px;
     padding: auto;
     margin: 10px;
@@ -46,8 +47,6 @@
       font-style: italic;
     }
   }
-
-
 }
 
 .event-card:hover {
