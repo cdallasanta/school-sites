@@ -3,8 +3,8 @@ import Event from '../components/Event';
 
 class EventsList extends React.Component {
   renderEvents = () => {
-    return this.props.events.map(e => {
-      return <Event event={e} />
+    return this.props.events.map((e, i) => {
+      return <Event event={e} key={i} />
     })
   }
 

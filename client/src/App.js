@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import SchoolSelector from './components/SchoolSelector';
 import SchoolContainer from './containers/SchoolContainer';
 import DistrictContainer from './containers/DistrictContainer';
-import CalendarCont from './containers/Calendar';
+import CalendarCont from './oldCalendar/Calendar';
 
 class App extends React.Component {
   render(){
