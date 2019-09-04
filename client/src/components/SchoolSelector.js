@@ -2,7 +2,7 @@ import React from 'react';
 
 class SchoolSelector extends React.Component {
   state = {
-    district: null,
+    schools: null,
     grade_level: "",
     school_id: ""
   }
@@ -13,7 +13,7 @@ class SchoolSelector extends React.Component {
       .then(resp => resp.json())
       .then(data => {
         debugger;
-        this.setState({district: data});
+        this.setState({schools: data});
       })
   }
 
@@ -22,7 +22,7 @@ class SchoolSelector extends React.Component {
   }
 
   schoolsForSelect = () => {
-    const schools = this.state.district.schools.filter(s => s.grade_level === this.state.grade_level)
+    const schools = this.state.schools.filter(s => s.grade_level === this.state.grade_level)
 
     return schools.map((school, i) => {
       return <option value={school.id} key={i}>{school.name}</option>
@@ -69,7 +69,7 @@ class SchoolSelector extends React.Component {
 
   render(){
     let resp;
-    if (this.state.district){
+    if (this.state.schools){
       resp = this.dropdownForm();
     } else {
       resp = "Loading schools"
