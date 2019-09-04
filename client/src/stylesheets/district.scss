@@ -1,65 +1,65 @@
-#district-page {
-  display: grid;
-  grid-template-columns: auto 0fr;
-  grid-template-rows: 0fr auto 0fr;
-  grid-template-areas: 
-  "header header"
-  "conntent sidebar"
-  "footer footer";
+// #district-page {
+//   display: grid;
+//   grid-template-columns: auto 0fr;
+//   grid-template-rows: 0fr auto 0fr;
+//   grid-template-areas: 
+//   "header header"
+//   "conntent sidebar"
+//   "footer footer";
 
-  background: lightblue;
-  min-height: 100vh;
-}
+//   background: lightblue;
+//   min-height: 100vh;
+// }
 
-#contact-div {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+// #contact-div {
+//   display: flex;
+//   justify-content: center;
+//   align-items: stretch;
 
-  * {
-    align-self: center;
-  }
-}
+//   * {
+//     align-self: center;
+//   }
+// }
 
-#header {
-  grid-area: header;
-  text-align: center;
-  background: darkblue;
-  color: white;
+// #header {
+//   grid-area: header;
+//   text-align: center;
+//   background: darkblue;
+//   color: white;
 
-  .chunk {
-    display:inline-block;
-  }
-}
+//   .chunk {
+//     display:inline-block;
+//   }
+// }
 
-#sidebar {
-  grid-area: sidebar;
-  margin: 10px 0px;
-}
+// #sidebar {
+//   grid-area: sidebar;
+//   margin: 10px 0px;
+// }
 
-.collapsible {
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  max-height: 0;
-}
+// .collapsible {
+//   overflow: hidden;
+//   transition: max-height 0.2s ease-out;
+//   max-height: 0;
+// }
 
-#footer {
-  grid-area: footer;
-}
+// #footer {
+//   grid-area: footer;
+// }
 
 
-/* ad styling */
-.chunk {
-  background: lightcoral;
-  margin: 5px;
-}
+// /* ad styling */
+// .chunk {
+//   background: lightcoral;
+//   margin: 5px;
+// }
 
-.panel-chunk {
-  width: 300px;
-  height: 250px;
-}
+// .panel-chunk {
+//   width: 300px;
+//   height: 250px;
+// }
 
-.banner-chunk {
-  width: 728px;
-  height: 90px;
-}
+// .banner-chunk {
+//   width: 728px;
+//   height: 90px;
+// }

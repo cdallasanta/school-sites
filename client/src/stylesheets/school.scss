@@ -1,11 +1,11 @@
 #school-page {
   display: grid;
-  grid-template-columns: auto 0fr;
+  grid-template-columns: 1fr 1fr 0fr;
   grid-template-rows: 0fr auto 0fr;
   grid-template-areas: 
-  "header header"
-  "conntent sidebar"
-  "footer footer";
+  "header header header"
+  "blogs events sidebar"
+  "footer footer footer";
 
   background: lightblue;
   min-height: 100vh;
@@ -30,6 +30,12 @@
   .chunk {
     display:inline-block;
   }
+}
+
+#footer {
+  height: 100px;
+  background: black;
+  color: white;
 }
 
 #sidebar {

@@ -1,5 +1,4 @@
 import React from 'react';
-import './stylesheets/App.scss';
 import { BrowserRouter, Route } from "react-router-dom";
 import SchoolSelector from './components/SchoolSelector';
 import SchoolContainer from './containers/SchoolContainer';

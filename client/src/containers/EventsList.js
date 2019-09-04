@@ -1,5 +1,6 @@
 import React from 'react';
 import Event from '../components/Event';
+import '../stylesheets/events.scss'
 
 class EventsList extends React.Component {
   renderEvents = () => {
@@ -10,7 +11,7 @@ class EventsList extends React.Component {
 
   render(){
     return (
-      <div>
+      <div id="events-div">
         <h3>Events</h3>
         {this.renderEvents()}
       </div>

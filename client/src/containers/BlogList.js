@@ -1,5 +1,6 @@
 import React from 'react';
 import Blog from '../components/Blog'
+import '../stylesheets/blogs.scss'
 
 class BlogList extends React.Component {
   renderBlogs = () => {
@@ -10,7 +11,7 @@ class BlogList extends React.Component {
 
   render(){
     return (
-      <div>
+      <div id="blogs-div">
         <h3>Blogs</h3>
         {this.renderBlogs()}
       </div>

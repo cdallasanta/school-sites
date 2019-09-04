@@ -1,5 +1,4 @@
 import React from 'react';
-import '../stylesheets/events.scss'
 
 const Event = ({event}) => {
   const eventStart = new Date(event.start);
