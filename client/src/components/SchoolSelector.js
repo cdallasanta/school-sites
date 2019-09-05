@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/selector.scss'
 
 class SchoolSelector extends React.Component {
   constructor(props){
@@ -71,18 +72,9 @@ class SchoolSelector extends React.Component {
     )
   }
 
-  render(){
-    let resp;
-    if (this.state.schools){
-      resp = this.dropdownForm();
-    } else {
-      resp = "Loading schools"
-    }
-    
+  render(){    
     return (
-      <div>
-        {resp}
-      </div>
+      this.dropdownForm()
     )
   }
 }
