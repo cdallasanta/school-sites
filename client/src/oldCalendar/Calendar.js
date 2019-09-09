@@ -14,7 +14,7 @@ class CalendarCont extends React.Component {
   
   componentDidMount(){
     // TODO static url right now for testing, probably move this to props? or something
-    fetch(`http://localhost:3001/api/districts/1/schools/1`)
+    fetch(`/api/districts/1/schools/1`)
       .then(resp => resp.json())
       .then(data => {
         let events = []
