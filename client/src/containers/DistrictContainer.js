@@ -11,7 +11,7 @@ class DistrictContainer extends React.Component {
   }
 
   componentDidMount(){
-    const district_id = this.props.match.params.dist_id
+    const district_id = 1
     fetch(`/api/districts/${district_id}`)
       .then(resp => resp.json())
       .then(data => {
