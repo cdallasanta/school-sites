@@ -11,7 +11,13 @@ class DistrictContainer extends React.Component {
   }
 
   componentDidMount(){
-    const district_id = 1
+    let district_id;
+    if (this.props.match.params.dist_id){
+      district_id = this.props.match.params.dist_id
+    } else {
+      district_id = 1
+    }
+
     fetch(`/api/districts/${district_id}`)
       .then(resp => resp.json())
       .then(data => {
@@ -21,7 +27,16 @@ class DistrictContainer extends React.Component {
 
   loadedResponse = () => {
     if (!this.state.district_data){
-      return "Loading District data"
+      return (
+        <div id="district-page">
+          <header id="header">
+            <h1>Loading district data</h1>
+          </header>
+          <div id="sidebar">
+          </div>
+          <Footer />
+        </div>
+      )
     } else {
       return (
         <div id="district-page">
