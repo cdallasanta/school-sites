@@ -1,20 +1,27 @@
 {
   "name": "school-sites",
   "version": "0.1.0",
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "main": "index.js",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
+  "engines": {
+    "node": "10.16.2",
+    "npm": "6.10.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdallasanta/school-sites.git"
   },
-  "author": "",
+  "author": "Chris Dalla Santa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cdallasanta/school-sites/issues"
