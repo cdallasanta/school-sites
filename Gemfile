@@ -18,6 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Devise for user authentication
 gem 'devise'
+gem 'devise_token_auth'
 
 # AMS for serializing objects
 gem 'active_model_serializers', '~> 0.10.0'
