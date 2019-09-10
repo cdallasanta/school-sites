@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
-  devise_for :users
   default_url_options :host => "localhost:3001"
 
   root :to => redirect('/districts/1')
@@ -10,7 +9,6 @@ Rails.application.routes.draw do
       get :avatar, on: :member
     end
 
-    # resources :schools
     resources :districts do
       resources :schools
     end
