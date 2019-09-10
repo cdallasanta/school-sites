@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   default_url_options :host => "localhost:3001"
 
   root :to => redirect('/districts/1')
