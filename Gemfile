@@ -20,6 +20,9 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'devise_token_auth'
 
+# Omni-auth for signing up through other sites
+# gem 'omniauth'
+
 # AMS for serializing objects
 gem 'active_model_serializers', '~> 0.10.0'
 
