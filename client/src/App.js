@@ -11,7 +11,6 @@ class App extends React.Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            {/* change  */}
             <Route exact path="/" component={DistrictContainer} />
             <Route exact path="/districts/:dist_id/selector" component={SchoolSelector} />
             <Route exact path="/districts/:dist_id/schools/:school_id" component={SchoolContainer} />

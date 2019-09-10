@@ -16,6 +16,9 @@ gem 'puma', '~> 3.11'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Devise for user authentication
+gem 'devise'
+
 # AMS for serializing objects
 gem 'active_model_serializers', '~> 0.10.0'
 
