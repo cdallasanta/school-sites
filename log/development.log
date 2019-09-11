@@ -24873,3 +24873,59 @@ Migrating to DeviseTokenAuthCreateUsers (20190910170425)
   ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Started POST "/auth" for 127.0.0.1 at 2019-09-11 16:02:09 -0700
+  [1m[35m (12.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::RegistrationsController#create as */*
+  Parameters: {"email"=>"test123@example.com", "password"=>"[FILTERED]"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (27.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test123@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["uid", "test123@example.com"], ["encrypted_password", "$2a$11$kGA0G56AiwEgfBVsagmPN.Omm7tHORtqcMj.5VHcbHpVRsjbcTzia"], ["email", "test123@example.com"], ["created_at", "2019-09-11 23:02:10.406386"], ["updated_at", "2019-09-11 23:02:10.406386"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (1.1ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"psBGUeEadTH3l0m6yGMBMQ\\\":{\\\"token\\\":\\\"$2a$10$VEbi1zmTIHuhez27zkOh4ep7D/K1dOyBoo6g2.XOq2Un0mTNWeQli\\\",\\\"expiry\\\":1569452530}}\""], ["updated_at", "2019-09-11 23:02:10.496852"], ["id", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 200 OK in 348ms (Views: 14.5ms | ActiveRecord: 55.1ms)
+
+
+Started POST "/auth/sign_in" for 127.0.0.1 at 2019-09-11 16:02:14 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test123@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test123@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"psBGUeEadTH3l0m6yGMBMQ\\\":{\\\"token\\\":\\\"$2a$10$VEbi1zmTIHuhez27zkOh4ep7D/K1dOyBoo6g2.XOq2Un0mTNWeQli\\\",\\\"expiry\\\":1569452530},\\\"5Ov4pYlBoDBM-CadTez1Tg\\\":{\\\"token\\\":\\\"$2a$10$2z1paCvkmovZRdcmJJzM4.cbFGlV31XxITDVaCucE9fyMm44rBEYC\\\",\\\"expiry\\\":1569452534}}\""], ["updated_at", "2019-09-11 23:02:14.947342"], ["id", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 225ms (Views: 1.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/districts/1" for 127.0.0.1 at 2019-09-11 16:06:06 -0700
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (11.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+Completed 404 Not Found in 40ms (ActiveRecord: 20.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find District with 'id'=1):
+  
+app/controllers/api/districts_controller.rb:3:in `show'
