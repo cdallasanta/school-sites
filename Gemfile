@@ -17,7 +17,7 @@ gem 'puma', '~> 3.11'
 gem 'bcrypt', '~> 3.1.7'
 
 # Devise for user authentication
-gem 'devise'
+gem "devise", ">= 4.7.1"
 gem 'devise_token_auth'
 
 # Omni-auth for signing up through other sites
