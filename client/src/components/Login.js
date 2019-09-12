@@ -17,10 +17,10 @@ export default class Login extends React.Component {
 
     fetch('http://localhost:3001/auth/sign_in', {
       method: 'POST',
-      body: {
+      body: JSON.stringify({
         email: this.state.email,
         password: this.state.password
-      }
+      })
     })
     .then((response, status, jqXHR) => {
       debugger;
