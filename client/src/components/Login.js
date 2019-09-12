@@ -2,8 +2,8 @@ import React from 'react';
 
 export default class Login extends React.Component {
   state = {
-    email: "",
-    password: ""
+    email: "test123@example.com",
+    password: "password"
   }
 
   handleChange = e => {
@@ -15,15 +15,15 @@ export default class Login extends React.Component {
   handleLogin = (e) => {
     e.preventDefault();
 
-    fetch({
-      type: 'POST',
-      url: 'http://localhost:3000/auth/sign_in',
-      data: {
+    fetch('http://localhost:3001/auth/sign_in', {
+      method: 'POST',
+      body: {
         email: this.state.email,
         password: this.state.password
       }
     })
     .then((response, status, jqXHR) => {
+      debugger;
       sessionStorage.setItem('user',
         JSON.stringify({
           'access-token': jqXHR.getResponseHeader('access-token'),

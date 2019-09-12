@@ -24929,3 +24929,77 @@ Completed 404 Not Found in 40ms (ActiveRecord: 20.0ms)
 ActiveRecord::RecordNotFound (Couldn't find District with 'id'=1):
   
 app/controllers/api/districts_controller.rb:3:in `show'
+  [1m[36mUser Load (36.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 10:53:57 -0700
+  [1m[35m (19.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by DeviseTokenAuth::SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 401 Unauthorized in 246ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 10:54:16 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 10:55:36 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 10:56:27 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/sign_in" for ::1 at 2019-09-12 10:56:41 -0700
+Processing by DeviseTokenAuth::SessionsController#new as HTML
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 405 Method Not Allowed in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 10:56:54 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in?email=test123@example.com&password=[FILTERED]" for ::1 at 2019-09-12 10:59:53 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test123@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test123@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (2.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"psBGUeEadTH3l0m6yGMBMQ\\\":{\\\"token\\\":\\\"$2a$10$VEbi1zmTIHuhez27zkOh4ep7D/K1dOyBoo6g2.XOq2Un0mTNWeQli\\\",\\\"expiry\\\":1569452530},\\\"5Ov4pYlBoDBM-CadTez1Tg\\\":{\\\"token\\\":\\\"$2a$10$2z1paCvkmovZRdcmJJzM4.cbFGlV31XxITDVaCucE9fyMm44rBEYC\\\",\\\"expiry\\\":1569452534},\\\"swNu724NVvupwKR4xk_xLw\\\":{\\\"token\\\":\\\"$2a$10$9qtMY0cp0f5.GZKV83sOu.a3XpTCE5UQspnSX7WNDLN9KUFXQsZt2\\\",\\\"expiry\\\":1569520793}}\""], ["updated_at", "2019-09-12 17:59:53.593929"], ["id", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.22ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 350ms (Views: 0.9ms | ActiveRecord: 29.9ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 11:02:33 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 11:05:43 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/sign_in" for ::1 at 2019-09-12 11:12:02 -0700
+Processing by DeviseTokenAuth::SessionsController#new as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 405 Method Not Allowed in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
