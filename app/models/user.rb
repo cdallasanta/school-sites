@@ -11,4 +11,10 @@ class User < ApplicationRecord
   has_many :blogs, foreign_key: :author_id
   
   has_one_attached :avatar
+
+  after_save :set_permissions
+
+  def set_permissions
+    self.permissions ||= "guest"
+  end
 end
