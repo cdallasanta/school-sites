@@ -25051,3 +25051,49 @@ Processing by DeviseTokenAuth::SessionsController#create as */*
 Completed 401 Unauthorized in 46ms (Views: 29.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/api/districts/1" for 127.0.0.1 at 2019-09-12 11:30:17 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.8ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+Completed 404 Not Found in 18ms (ActiveRecord: 8.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find District with 'id'=1):
+  
+app/controllers/api/districts_controller.rb:3:in `show'
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 11:30:32 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 29ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/auth/sign_in?email=test123@example.com&password=[FILTERED]" for ::1 at 2019-09-12 11:33:28 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test123@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (20.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test123@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"psBGUeEadTH3l0m6yGMBMQ\\\":{\\\"token\\\":\\\"$2a$10$VEbi1zmTIHuhez27zkOh4ep7D/K1dOyBoo6g2.XOq2Un0mTNWeQli\\\",\\\"expiry\\\":1569452530},\\\"5Ov4pYlBoDBM-CadTez1Tg\\\":{\\\"token\\\":\\\"$2a$10$2z1paCvkmovZRdcmJJzM4.cbFGlV31XxITDVaCucE9fyMm44rBEYC\\\",\\\"expiry\\\":1569452534},\\\"swNu724NVvupwKR4xk_xLw\\\":{\\\"token\\\":\\\"$2a$10$9qtMY0cp0f5.GZKV83sOu.a3XpTCE5UQspnSX7WNDLN9KUFXQsZt2\\\",\\\"expiry\\\":1569520793},\\\"5Jb9lHHV_qS881YEPAtMxQ\\\":{\\\"token\\\":\\\"$2a$10$cto9o8w6xhNSMq9fQ5lMk./ZEy.mN.NNxyrfotJ2sRcO8h35ohIE.\\\",\\\"expiry\\\":1569522809}}\""], ["updated_at", "2019-09-12 18:33:29.196474"], ["id", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 343ms (Views: 0.5ms | ActiveRecord: 41.4ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 11:34:49 -0700
+  
+SyntaxError (/mnt/c/Users/Chris/Documents/projects/school-sites/config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+  post '/auth/sign_in' to: 'application#test'
+                       ^~):
+  
+config/routes.rb:3: syntax error, unexpected tIDENTIFIER, expecting end
+Started POST "/auth/sign_in" for ::1 at 2019-09-12 11:35:53 -0700
+Processing by ApplicationController#test as */*

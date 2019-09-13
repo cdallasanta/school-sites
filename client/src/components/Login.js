@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 
 export default class Login extends React.Component {
   state = {
@@ -15,12 +16,20 @@ export default class Login extends React.Component {
   handleLogin = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:3001/auth/sign_in', {
-      method: 'POST',
-      body: JSON.stringify({
+    // fetch('http://localhost:3001/auth/sign_in', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: this.state.email,
+    //     password: this.state.password
+    //   })
+    // })
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost:3001/auth/sign_in',
+      data: {
         email: this.state.email,
         password: this.state.password
-      })
+      }
     })
     .then((response, status, jqXHR) => {
       debugger;

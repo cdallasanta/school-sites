@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
   default_url_options :host => "localhost:3001"
 
-  root :to => redirect('/districts/1')
+  root to: redirect('/districts/1')
 
   namespace :api do
     resources :users do 
