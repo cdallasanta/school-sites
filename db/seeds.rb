@@ -147,16 +147,17 @@ School.create(
   grade_level: "high"
 )
 
+
 # users
-u = User.create(name:"Chris", email:"c@email.com", permissions:"admin")
+u = User.create(name:"Chris", email:"c@email.com", permissions:"admin", password:"password")
 u.schools << School.find(1)
 u.avatar.attach(io: File.open(Rails.root.join('test_avatars/1.png')), filename: '1.png')
 
-u = User.create(name:"Chukundi", email:"c@email.com", permissions:"admin")
+u = User.create(name:"Chukundi", email:"c@email.com", permissions:"admin", password:"password")
 u.schools << School.find(2)
 u.avatar.attach(io: File.open(Rails.root.join('test_avatars/2.jpg')), filename: '2.jpg')
 
-u = User.create(name:"Jeron", email:"j@email.com", permissions:"admin")
+u = User.create(name:"Jeron", email:"j@email.com", permissions:"admin", password:"password")
 u.schools << School.find(3)
 u.avatar.attach(io: File.open(Rails.root.join('test_avatars/3.jpg')), filename: '3.jpg')
 

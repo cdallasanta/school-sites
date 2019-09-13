@@ -25719,3 +25719,622 @@ Completed 404 Not Found in 1ms (ActiveRecord: 0.4ms)
 ActiveRecord::RecordNotFound (Couldn't find District with 'id'=1):
   
 app/controllers/api/districts_controller.rb:3:in `show'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDistrict Create (2.1ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Seattle School District"], ["created_at", "2019-09-13 18:09:38.764082"], ["updated_at", "2019-09-13 18:09:38.764082"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSchool Create (0.9ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Adams Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.816576"], ["updated_at", "2019-09-13 18:09:38.816576"], ["homepage_url", "http://adamses.seattleschools.org/"], ["address", "6110 28th Ave NW Seattle, WA 98107"], ["phone", "206-252-1300"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Alki Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.820201"], ["updated_at", "2019-09-13 18:09:38.820201"], ["homepage_url", "https://alkies.seattleschools.org/"], ["address", "3010  59th Ave SW Seattle, WA 98116"], ["phone", "206-252-9050"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Arbor Heights Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.823089"], ["updated_at", "2019-09-13 18:09:38.823089"], ["homepage_url", "https://arborheightses.seattleschools.org/"], ["address", "3701 SW 104th Street, Seattle, WA 98146"], ["phone", "206-252-9250"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Daniel Bagley Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.826015"], ["updated_at", "2019-09-13 18:09:38.826015"], ["homepage_url", "http://bagleyes.seattleschools.org/"], ["address", "7821 Stone Ave N Seattle, WA 98103"], ["phone", "206-252-5110"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Beacon Hill International Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.828933"], ["updated_at", "2019-09-13 18:09:38.828933"], ["homepage_url", "https://beaconhilles.seattleschools.org/"], ["address", "2025  14th Ave S Seattle, WA 98144"], ["phone", "206-252-2700"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "William Cullen Bryant Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.831867"], ["updated_at", "2019-09-13 18:09:38.831867"], ["homepage_url", "https://bryantes.seattleschools.org/"], ["address", "3311 NE 60th St Seattle, WA 98115"], ["phone", "206-252-5200"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cascadia Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.834835"], ["updated_at", "2019-09-13 18:09:38.834835"], ["homepage_url", "http://cascadiaes.seattleschools.org/"], ["address", "1700 N 90th St Seattle, WA 98103"], ["phone", "206-413-2000"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cedar Park Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.837872"], ["updated_at", "2019-09-13 18:09:38.837872"], ["homepage_url", "https://cedarparkes.seattleschools.org/"], ["address", "13224 37th Ave NE Seattle, WA 98125​"], ["phone", "206-252-4300"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Frantz H. Coe Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.840824"], ["updated_at", "2019-09-13 18:09:38.840824"], ["homepage_url", "https://coees.seattleschools.org/"], ["address", "2424  7th Ave W Seattle, WA 98119"], ["phone", "206-252-2000"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Catharine Blaine"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.843753"], ["updated_at", "2019-09-13 18:09:38.843753"], ["homepage_url", "https://blainek8.seattleschools.org/"], ["address", "2550 34th Ave W Seattle, WA 98199"], ["phone", "206-252-1920"], ["grade_level", "k-8"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Louisa Boren STEM"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.846777"], ["updated_at", "2019-09-13 18:09:38.846777"], ["homepage_url", "https://borenstemk8.seattleschools.org/"], ["address", "5950 Delridge Way SW Seattle, WA 98106"], ["phone", "206-252-8450"], ["grade_level", "k-8"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jane Addams Middle School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.849571"], ["updated_at", "2019-09-13 18:09:38.849571"], ["homepage_url", "https://addamsms.seattleschools.org/"], ["address", "11051 34th Ave NE Seattle, WA 98125"], ["phone", "206-252-4500"], ["grade_level", "middle"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:122
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "David T. Denny International Middle School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.852393"], ["updated_at", "2019-09-13 18:09:38.852393"], ["homepage_url", "https://dennyms.seattleschools.org/"], ["address", "2601 SW Kenyon St Seattle, WA 98126"], ["phone", "206-252-9000"], ["grade_level", "middle"]]
+  ↳ db/seeds.rb:122
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:122
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:132
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ballard High School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.855268"], ["updated_at", "2019-09-13 18:09:38.855268"], ["homepage_url", "https://ballardhs.seattleschools.org/"], ["address", "1418 NW 65th St Seattle, WA 98117"], ["phone", "206-252-1000"], ["grade_level", "high"]]
+  ↳ db/seeds.rb:132
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:132
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:141
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "The Center High School"], ["district_id", 1], ["created_at", "2019-09-13 18:09:38.858092"], ["updated_at", "2019-09-13 18:09:38.858092"], ["homepage_url", "https://centerhs.seattleschools.org/"], ["address", "305 Harrison St Seattle, WA 98109"], ["phone", "206-252-9850"], ["grade_level", "high"]]
+  ↳ db/seeds.rb:141
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:141
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8496546548085237075)[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to AddAttrsToUser (20190913181020)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "users" ADD "permission" character varying[0m
+  ↳ db/migrate/20190913181020_add_attrs_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190913181020"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8496546548085237075)[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDistrict Create (5.7ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Seattle School District"], ["created_at", "2019-09-13 18:10:55.150082"], ["updated_at", "2019-09-13 18:10:55.150082"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSchool Create (1.0ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Adams Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.179637"], ["updated_at", "2019-09-13 18:10:55.179637"], ["homepage_url", "http://adamses.seattleschools.org/"], ["address", "6110 28th Ave NW Seattle, WA 98107"], ["phone", "206-252-1300"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Alki Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.183333"], ["updated_at", "2019-09-13 18:10:55.183333"], ["homepage_url", "https://alkies.seattleschools.org/"], ["address", "3010  59th Ave SW Seattle, WA 98116"], ["phone", "206-252-9050"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Arbor Heights Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.186101"], ["updated_at", "2019-09-13 18:10:55.186101"], ["homepage_url", "https://arborheightses.seattleschools.org/"], ["address", "3701 SW 104th Street, Seattle, WA 98146"], ["phone", "206-252-9250"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Daniel Bagley Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.188915"], ["updated_at", "2019-09-13 18:10:55.188915"], ["homepage_url", "http://bagleyes.seattleschools.org/"], ["address", "7821 Stone Ave N Seattle, WA 98103"], ["phone", "206-252-5110"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Beacon Hill International Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.191568"], ["updated_at", "2019-09-13 18:10:55.191568"], ["homepage_url", "https://beaconhilles.seattleschools.org/"], ["address", "2025  14th Ave S Seattle, WA 98144"], ["phone", "206-252-2700"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "William Cullen Bryant Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.194161"], ["updated_at", "2019-09-13 18:10:55.194161"], ["homepage_url", "https://bryantes.seattleschools.org/"], ["address", "3311 NE 60th St Seattle, WA 98115"], ["phone", "206-252-5200"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cascadia Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.196659"], ["updated_at", "2019-09-13 18:10:55.196659"], ["homepage_url", "http://cascadiaes.seattleschools.org/"], ["address", "1700 N 90th St Seattle, WA 98103"], ["phone", "206-413-2000"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cedar Park Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.199136"], ["updated_at", "2019-09-13 18:10:55.199136"], ["homepage_url", "https://cedarparkes.seattleschools.org/"], ["address", "13224 37th Ave NE Seattle, WA 98125​"], ["phone", "206-252-4300"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Frantz H. Coe Elementary School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.201620"], ["updated_at", "2019-09-13 18:10:55.201620"], ["homepage_url", "https://coees.seattleschools.org/"], ["address", "2424  7th Ave W Seattle, WA 98119"], ["phone", "206-252-2000"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Catharine Blaine"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.204004"], ["updated_at", "2019-09-13 18:10:55.204004"], ["homepage_url", "https://blainek8.seattleschools.org/"], ["address", "2550 34th Ave W Seattle, WA 98199"], ["phone", "206-252-1920"], ["grade_level", "k-8"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Louisa Boren STEM"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.206502"], ["updated_at", "2019-09-13 18:10:55.206502"], ["homepage_url", "https://borenstemk8.seattleschools.org/"], ["address", "5950 Delridge Way SW Seattle, WA 98106"], ["phone", "206-252-8450"], ["grade_level", "k-8"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jane Addams Middle School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.208920"], ["updated_at", "2019-09-13 18:10:55.208920"], ["homepage_url", "https://addamsms.seattleschools.org/"], ["address", "11051 34th Ave NE Seattle, WA 98125"], ["phone", "206-252-4500"], ["grade_level", "middle"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:122
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "David T. Denny International Middle School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.211539"], ["updated_at", "2019-09-13 18:10:55.211539"], ["homepage_url", "https://dennyms.seattleschools.org/"], ["address", "2601 SW Kenyon St Seattle, WA 98126"], ["phone", "206-252-9000"], ["grade_level", "middle"]]
+  ↳ db/seeds.rb:122
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:122
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:132
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ballard High School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.214284"], ["updated_at", "2019-09-13 18:10:55.214284"], ["homepage_url", "https://ballardhs.seattleschools.org/"], ["address", "1418 NW 65th St Seattle, WA 98117"], ["phone", "206-252-1000"], ["grade_level", "high"]]
+  ↳ db/seeds.rb:132
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:132
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:141
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "The Center High School"], ["district_id", 2], ["created_at", "2019-09-13 18:10:55.216822"], ["updated_at", "2019-09-13 18:10:55.216822"], ["homepage_url", "https://centerhs.seattleschools.org/"], ["address", "305 Harrison St Seattle, WA 98109"], ["phone", "206-252-9850"], ["grade_level", "high"]]
+  ↳ db/seeds.rb:141
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:141
+  [1m[35m (10.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (5033.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "school_sites_development"[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (420.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "school_sites_development"[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (349.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "school_sites_test"[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1650.4ms)[0m  [1m[35mCREATE DATABASE "school_sites_development" ENCODING = 'unicode'[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1418.6ms)[0m  [1m[35mCREATE DATABASE "school_sites_test" ENCODING = 'unicode'[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (23.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8496546548085237075)[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to CreateDistricts (20190831001057)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "districts" ("id" bigserial primary key, "name" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190831001057_create_districts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190831001057"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to CreateSchools (20190831001327)
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schools" ("id" bigserial primary key, "name" text, "district_id" integer, "site_rep_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190831001327_create_schools.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190831001327"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to CreateEvents (20190902182022)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" bigserial primary key, "title" text, "organizer_id" integer, "start" timestamp, "end" timestamp, "description" text, "approved" boolean, "allDay" boolean, "eventable_type" character varying, "eventable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190902182022_create_events.rb:3
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_events_on_eventable_type_and_eventable_id" ON "events"  ("eventable_type", "eventable_id")[0m
+  ↳ db/migrate/20190902182022_create_events.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190902182022"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to AddAttrsToSchools (20190902210952)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schools" ADD "homepage_url" text[0m
+  ↳ db/migrate/20190902210952_add_attrs_to_schools.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "schools" ADD "address" text[0m
+  ↳ db/migrate/20190902210952_add_attrs_to_schools.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schools" ADD "phone" text[0m
+  ↳ db/migrate/20190902210952_add_attrs_to_schools.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "schools" ADD "grade_level" text[0m
+  ↳ db/migrate/20190902210952_add_attrs_to_schools.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190902210952"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to CreateBlogs (20190902233844)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" bigserial primary key, "author_id" integer, "title" text, "content" text, "blogable_type" character varying, "blogable_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190902233844_create_blogs.rb:3
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_blogs_on_blogable_type_and_blogable_id" ON "blogs"  ("blogable_type", "blogable_id")[0m
+  ↳ db/migrate/20190902233844_create_blogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190902233844"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to CreateActiveStorageTables (20190903005746)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190903005746_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/migrate/20190903005746_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20190903005746_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/migrate/20190903005746_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20190903005746_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190903005746"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to DeviseTokenAuthCreateUsers (20190910170425)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "provider" character varying DEFAULT 'email' NOT NULL, "uid" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "allow_password_change" boolean DEFAULT FALSE, "remember_created_at" timestamp, "name" character varying, "nickname" character varying, "image" character varying, "email" character varying, "tokens" json, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190910170425_devise_token_auth_create_users.rb:4
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190910170425_devise_token_auth_create_users.rb:43
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_uid_and_provider" ON "users"  ("uid", "provider")[0m
+  ↳ db/migrate/20190910170425_devise_token_auth_create_users.rb:44
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190910170425_devise_token_auth_create_users.rb:45
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190910170425"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+Migrating to AddAttrsToUser (20190913181020)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "permissions" character varying[0m
+  ↳ db/migrate/20190913181020_add_attrs_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190913181020"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (7.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-13 18:11:49.448095"], ["updated_at", "2019-09-13 18:11:49.448095"]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8496546548085237075)[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mDistrict Create (7.7ms)[0m  [1m[32mINSERT INTO "districts" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Seattle School District"], ["created_at", "2019-09-13 18:11:53.847825"], ["updated_at", "2019-09-13 18:11:53.847825"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mSchool Create (5.5ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Adams Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.879467"], ["updated_at", "2019-09-13 18:11:53.879467"], ["homepage_url", "http://adamses.seattleschools.org/"], ["address", "6110 28th Ave NW Seattle, WA 98107"], ["phone", "206-252-1300"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Alki Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.888024"], ["updated_at", "2019-09-13 18:11:53.888024"], ["homepage_url", "https://alkies.seattleschools.org/"], ["address", "3010  59th Ave SW Seattle, WA 98116"], ["phone", "206-252-9050"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Arbor Heights Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.891182"], ["updated_at", "2019-09-13 18:11:53.891182"], ["homepage_url", "https://arborheightses.seattleschools.org/"], ["address", "3701 SW 104th Street, Seattle, WA 98146"], ["phone", "206-252-9250"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Daniel Bagley Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.894030"], ["updated_at", "2019-09-13 18:11:53.894030"], ["homepage_url", "http://bagleyes.seattleschools.org/"], ["address", "7821 Stone Ave N Seattle, WA 98103"], ["phone", "206-252-5110"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:39
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:48
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Beacon Hill International Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.897135"], ["updated_at", "2019-09-13 18:11:53.897135"], ["homepage_url", "https://beaconhilles.seattleschools.org/"], ["address", "2025  14th Ave S Seattle, WA 98144"], ["phone", "206-252-2700"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:57
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "William Cullen Bryant Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.900193"], ["updated_at", "2019-09-13 18:11:53.900193"], ["homepage_url", "https://bryantes.seattleschools.org/"], ["address", "3311 NE 60th St Seattle, WA 98115"], ["phone", "206-252-5200"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:57
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cascadia Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.903113"], ["updated_at", "2019-09-13 18:11:53.903113"], ["homepage_url", "http://cascadiaes.seattleschools.org/"], ["address", "1700 N 90th St Seattle, WA 98103"], ["phone", "206-413-2000"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:75
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Cedar Park Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.906043"], ["updated_at", "2019-09-13 18:11:53.906043"], ["homepage_url", "https://cedarparkes.seattleschools.org/"], ["address", "13224 37th Ave NE Seattle, WA 98125​"], ["phone", "206-252-4300"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:75
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:75
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:84
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Frantz H. Coe Elementary School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.908711"], ["updated_at", "2019-09-13 18:11:53.908711"], ["homepage_url", "https://coees.seattleschools.org/"], ["address", "2424  7th Ave W Seattle, WA 98119"], ["phone", "206-252-2000"], ["grade_level", "elementary"]]
+  ↳ db/seeds.rb:84
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:84
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:94
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Catharine Blaine"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.911431"], ["updated_at", "2019-09-13 18:11:53.911431"], ["homepage_url", "https://blainek8.seattleschools.org/"], ["address", "2550 34th Ave W Seattle, WA 98199"], ["phone", "206-252-1920"], ["grade_level", "k-8"]]
+  ↳ db/seeds.rb:94
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:94
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:103
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Louisa Boren STEM"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.914092"], ["updated_at", "2019-09-13 18:11:53.914092"], ["homepage_url", "https://borenstemk8.seattleschools.org/"], ["address", "5950 Delridge Way SW Seattle, WA 98106"], ["phone", "206-252-8450"], ["grade_level", "k-8"]]
+  ↳ db/seeds.rb:103
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:103
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Jane Addams Middle School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.916805"], ["updated_at", "2019-09-13 18:11:53.916805"], ["homepage_url", "https://addamsms.seattleschools.org/"], ["address", "11051 34th Ave NE Seattle, WA 98125"], ["phone", "206-252-4500"], ["grade_level", "middle"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:122
+  [1m[36mSchool Create (0.2ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "David T. Denny International Middle School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.919538"], ["updated_at", "2019-09-13 18:11:53.919538"], ["homepage_url", "https://dennyms.seattleschools.org/"], ["address", "2601 SW Kenyon St Seattle, WA 98126"], ["phone", "206-252-9000"], ["grade_level", "middle"]]
+  ↳ db/seeds.rb:122
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:122
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:132
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ballard High School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.922145"], ["updated_at", "2019-09-13 18:11:53.922145"], ["homepage_url", "https://ballardhs.seattleschools.org/"], ["address", "1418 NW 65th St Seattle, WA 98117"], ["phone", "206-252-1000"], ["grade_level", "high"]]
+  ↳ db/seeds.rb:132
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:132
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:141
+  [1m[36mSchool Create (0.3ms)[0m  [1m[32mINSERT INTO "schools" ("name", "district_id", "created_at", "updated_at", "homepage_url", "address", "phone", "grade_level") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "The Center High School"], ["district_id", 1], ["created_at", "2019-09-13 18:11:53.924708"], ["updated_at", "2019-09-13 18:11:53.924708"], ["homepage_url", "https://centerhs.seattleschools.org/"], ["address", "305 Harrison St Seattle, WA 98109"], ["phone", "206-252-9850"], ["grade_level", "high"]]
+  ↳ db/seeds.rb:141
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:141
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:152
+  [1m[36mUser Exists (19.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "c@email.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:152
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "name", "email", "created_at", "updated_at", "permissions") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["uid", "c@email.com"], ["encrypted_password", "$2a$11$n7npegG2YmZlr1l7fbbLi.99efbFwPu9FH/GCKHvp7QfXRmBvOi7e"], ["name", "Chris"], ["email", "c@email.com"], ["created_at", "2019-09-13 18:11:54.087169"], ["updated_at", "2019-09-13 18:11:54.087169"], ["permissions", "admin"]]
+  ↳ db/seeds.rb:152
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:152
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:153
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:153
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:153
+  [1m[36mSchool Update (0.3ms)[0m  [1m[33mUPDATE "schools" SET "site_rep_id" = $1, "updated_at" = $2 WHERE "schools"."id" = $3[0m  [["site_rep_id", 1], ["updated_at", "2019-09-13 18:11:54.129006"], ["id", 1]]
+  ↳ db/seeds.rb:153
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:153
+  [1m[36mActiveStorage::Attachment Load (14.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:154
+[36m  Disk Storage (5.2ms) [0m[32mUploaded file to key: YX65kgL2v8JNnS93mpDvW1pK (checksum: gU270ExFdKFCch4wdTJtbA==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:154
+  [1m[36mActiveStorage::Blob Create (10.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "YX65kgL2v8JNnS93mpDvW1pK"], ["filename", "1.png"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 152437], ["checksum", "gU270ExFdKFCch4wdTJtbA=="], ["created_at", "2019-09-13 18:11:54.331867"]]
+  ↳ db/seeds.rb:154
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:154
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:154
+  [1m[36mActiveStorage::Attachment Create (1.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 1], ["blob_id", 1], ["created_at", "2019-09-13 18:11:54.358078"]]
+  ↳ db/seeds.rb:154
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2019-09-13 18:11:54.360518"], ["id", 1]]
+  ↳ db/seeds.rb:154
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:154
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:154
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782] Performing ActiveStorage::AnalyzeJob (Job ID: 07384ded-a2c2-4fc6-ae34-c52d70264782) from Inline(default) with arguments: #<GlobalID:0x00007fffcbc39b28 @uri=#<URI::GID gid://api/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782] [36m  Disk Storage (7.1ms) [0m[34mDownloaded file from key: YX65kgL2v8JNnS93mpDvW1pK[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782]   ↳ db/seeds.rb:154
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":1280,\"height\":720,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782]   ↳ db/seeds.rb:154
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782]   [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782]   ↳ db/seeds.rb:154
+[ActiveJob] [ActiveStorage::AnalyzeJob] [07384ded-a2c2-4fc6-ae34-c52d70264782] Performed ActiveStorage::AnalyzeJob (Job ID: 07384ded-a2c2-4fc6-ae34-c52d70264782) from Inline(default) in 430.78ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 07384ded-a2c2-4fc6-ae34-c52d70264782) to Inline(default) with arguments: #<GlobalID:0x00007fffcbd52028 @uri=#<URI::GID gid://api/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:156
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "c@email.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:156
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:156
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:157
+[36m  Disk Storage (15.8ms) [0m[32mUploaded file to key: Zuv9p3w67iB2SJoQDDSh8zbm (checksum: ggD6sNC2QoXYPVk1v/HShg==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "Zuv9p3w67iB2SJoQDDSh8zbm"], ["filename", "2.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 4020678], ["checksum", "ggD6sNC2QoXYPVk1v/HShg=="], ["created_at", "2019-09-13 18:11:55.071467"]]
+  ↳ db/seeds.rb:158
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:158
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:160
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "j@email.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:160
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("uid", "encrypted_password", "name", "email", "created_at", "updated_at", "permissions") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["uid", "j@email.com"], ["encrypted_password", "$2a$11$3GOxnG6jAr8yoUpyDQ4EZ.ymf9s7oM.WyoVnn.Jse/ALzMdWi1tkq"], ["name", "Jeron"], ["email", "j@email.com"], ["created_at", "2019-09-13 18:11:55.191446"], ["updated_at", "2019-09-13 18:11:55.191446"], ["permissions", "admin"]]
+  ↳ db/seeds.rb:160
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:160
+  [1m[36mSchool Load (0.2ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:161
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:161
+  [1m[36mDistrict Load (0.2ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:161
+  [1m[36mSchool Update (0.3ms)[0m  [1m[33mUPDATE "schools" SET "site_rep_id" = $1, "updated_at" = $2 WHERE "schools"."id" = $3[0m  [["site_rep_id", 2], ["updated_at", "2019-09-13 18:11:55.197181"], ["id", 3]]
+  ↳ db/seeds.rb:161
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:161
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:162
+[36m  Disk Storage (9.0ms) [0m[32mUploaded file to key: iUWf4Dj1kNcX8sChk5p6p6Xe (checksum: wfmP5L3u+FZ4Ffk5ZK4SIg==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:162
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "iUWf4Dj1kNcX8sChk5p6p6Xe"], ["filename", "3.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 1547736], ["checksum", "wfmP5L3u+FZ4Ffk5ZK4SIg=="], ["created_at", "2019-09-13 18:11:55.215390"]]
+  ↳ db/seeds.rb:162
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:162
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:162
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "avatar"], ["record_type", "User"], ["record_id", 2], ["blob_id", 3], ["created_at", "2019-09-13 18:11:55.218334"]]
+  ↳ db/seeds.rb:162
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2019-09-13 18:11:55.219295"], ["id", 2]]
+  ↳ db/seeds.rb:162
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:162
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:162
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01] Performing ActiveStorage::AnalyzeJob (Job ID: 92e8c2db-220b-450b-9fc9-6801ae24aa01) from Inline(default) with arguments: #<GlobalID:0x00007fffcbe68f20 @uri=#<URI::GID gid://api/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01] [36m  Disk Storage (10.7ms) [0m[34mDownloaded file from key: iUWf4Dj1kNcX8sChk5p6p6Xe[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01]   ↳ db/seeds.rb:162
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"width\":2592,\"height\":1944,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01]   ↳ db/seeds.rb:162
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01]   [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01]   ↳ db/seeds.rb:162
+[ActiveJob] [ActiveStorage::AnalyzeJob] [92e8c2db-220b-450b-9fc9-6801ae24aa01] Performed ActiveStorage::AnalyzeJob (Job ID: 92e8c2db-220b-450b-9fc9-6801ae24aa01) from Inline(default) in 173.21ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 92e8c2db-220b-450b-9fc9-6801ae24aa01) to Inline(default) with arguments: #<GlobalID:0x00007fffca2b4bd0 @uri=#<URI::GID gid://api/ActiveStorage::Blob/3>>
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:165
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:165
+  [1m[36mEvent Create (13.5ms)[0m  [1m[32mINSERT INTO "events" ("title", "organizer_id", "start", "end", "allDay", "eventable_type", "eventable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "District Event"], ["organizer_id", 1], ["start", "2019-09-08 17:19:00"], ["end", "2019-09-08 18:19:00"], ["allDay", false], ["eventable_type", "District"], ["eventable_id", 1], ["created_at", "2019-09-13 18:11:55.413496"], ["updated_at", "2019-09-13 18:11:55.413496"]]
+  ↳ db/seeds.rb:165
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:165
+  [1m[36mSchool Load (0.9ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:167
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:167
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("title", "organizer_id", "start", "end", "allDay", "eventable_type", "eventable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "School Event"], ["organizer_id", 1], ["start", "2019-09-10 17:19:00"], ["end", "2019-09-11 18:19:00"], ["allDay", false], ["eventable_type", "School"], ["eventable_id", 1], ["created_at", "2019-09-13 18:11:55.435705"], ["updated_at", "2019-09-13 18:11:55.435705"]]
+  ↳ db/seeds.rb:167
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:167
+  [1m[36mDistrict Load (0.3ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:170
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:170
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:170
+  [1m[36mBlog Create (14.9ms)[0m  [1m[32mINSERT INTO "blogs" ("author_id", "title", "content", "blogable_type", "blogable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["author_id", 1], ["title", "District Blog"], ["content", "Lorem Ipsum"], ["blogable_type", "District"], ["blogable_id", 1], ["created_at", "2019-09-13 18:11:55.452532"], ["updated_at", "2019-09-13 18:11:55.452532"]]
+  ↳ db/seeds.rb:170
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:170
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:171
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:171
+  [1m[36mBlog Create (0.4ms)[0m  [1m[32mINSERT INTO "blogs" ("author_id", "title", "content", "blogable_type", "blogable_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["author_id", 1], ["title", "School Blog"], ["content", "Lorem Ipsum"], ["blogable_type", "School"], ["blogable_id", 1], ["created_at", "2019-09-13 18:11:55.474351"], ["updated_at", "2019-09-13 18:11:55.474351"]]
+  ↳ db/seeds.rb:171
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:171
