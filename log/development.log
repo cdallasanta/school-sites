@@ -25598,3 +25598,100 @@ Processing by DeviseTokenAuth::SessionsController#create as */*
 Completed 401 Unauthorized in 2ms (Views: 0.3ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/api/districts/1" for 127.0.0.1 at 2019-09-13 11:04:26 -0700
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (14.6ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+Completed 404 Not Found in 59ms (ActiveRecord: 31.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find District with 'id'=1):
+  
+app/controllers/api/districts_controller.rb:3:in `show'
+Started POST "/auth/sign_in" for ::1 at 2019-09-13 11:04:56 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test12ple.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test12ple.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 401 Unauthorized in 39ms (Views: 14.6ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-13 11:05:40 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test12ple.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test12ple.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-13 11:05:44 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test12ple.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test12ple.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 401 Unauthorized in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-13 11:06:02 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test12ple.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test12ple.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.64ms)
+Completed 401 Unauthorized in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-13 11:06:36 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test12ple.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test12ple.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 401 Unauthorized in 4ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-13 11:06:55 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test12ple.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test12ple.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 401 Unauthorized in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth/sign_in" for ::1 at 2019-09-13 11:07:12 -0700
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test123@example.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test123@example.com"], ["provider", "email"], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "\"{\\\"psBGUeEadTH3l0m6yGMBMQ\\\":{\\\"token\\\":\\\"$2a$10$VEbi1zmTIHuhez27zkOh4ep7D/K1dOyBoo6g2.XOq2Un0mTNWeQli\\\",\\\"expiry\\\":1569452530},\\\"5Ov4pYlBoDBM-CadTez1Tg\\\":{\\\"token\\\":\\\"$2a$10$2z1paCvkmovZRdcmJJzM4.cbFGlV31XxITDVaCucE9fyMm44rBEYC\\\",\\\"expiry\\\":1569452534},\\\"swNu724NVvupwKR4xk_xLw\\\":{\\\"token\\\":\\\"$2a$10$9qtMY0cp0f5.GZKV83sOu.a3XpTCE5UQspnSX7WNDLN9KUFXQsZt2\\\",\\\"expiry\\\":1569520793},\\\"5Jb9lHHV_qS881YEPAtMxQ\\\":{\\\"token\\\":\\\"$2a$10$cto9o8w6xhNSMq9fQ5lMk./ZEy.mN.NNxyrfotJ2sRcO8h35ohIE.\\\",\\\"expiry\\\":1569522809},\\\"MX-lsL7Y2_j74SFsmPIvpw\\\":{\\\"token\\\":\\\"$2a$10$LkQW67HrRDWfA5SarlKurOYA8KGy3mY17dO2FzIs9yIyp4P2LNQuK\\\",\\\"expiry\\\":1569605776},\\\"6X_iGdNOixUqlC3a2aesgQ\\\":{\\\"token\\\":\\\"$2a$10$a/IsD1mHfg1rQX9vlEAyu.UyAdhHnpzSfdDDrDvXupWoHQ7gXmlh2\\\",\\\"expiry\\\":1569605897},\\\"5-H963pZfvULH13MEoJ7Jg\\\":{\\\"token\\\":\\\"$2a$10$LOK/7ofRsJvbHQc/C6l1/OHt9qYBhuqPdS5ONMlMEKVMUrP6hrsRG\\\",\\\"expiry\\\":1569606184},\\\"SjqV9K9_rQhkSmc5B3NCFg\\\":{\\\"token\\\":\\\"$2a$10$VDRw.fhG1EAhdLTBBAbezegfN0cNe/hr1wEMh9vmlKNFMsaW7wL7.\\\",\\\"expiry\\\":1569606801},\\\"8bwDccq3Xkp1TtNtvj-A4A\\\":{\\\"token\\\":\\\"$2a$10$eetZ8NDH0I87/tV5MBVe1etzOSeuOPDj7c1HTvilhrl.a1btPUZ7S\\\",\\\"expiry\\\":1569606933},\\\"nrzeIba9iAh22F0SM6sblw\\\":{\\\"token\\\":\\\"$2a$10$oeVzZjKGe55773B6cEiX/eJMGdVYFBt3VpR0tnZOqq1VKTO00IHbu\\\",\\\"expiry\\\":1569607632}}\""], ["updated_at", "2019-09-13 18:07:12.898322"], ["id", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 265ms (Views: 0.6ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/api/districts/1" for 127.0.0.1 at 2019-09-13 11:07:12 -0700
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (0.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find District with 'id'=1):
+  
+app/controllers/api/districts_controller.rb:3:in `show'
