@@ -5,6 +5,7 @@ import SchoolContainer from './containers/SchoolContainer';
 import DistrictContainer from './containers/DistrictContainer';
 import CalendarCont from './oldCalendar/Calendar';
 import Login from './components/Login';
+import Signup from './components/Signup';
 
 class App extends React.Component {
   render(){
@@ -18,6 +19,7 @@ class App extends React.Component {
             <Route exact path="/districts/:dist_id" component={DistrictContainer} />
             <Route exact path="/districts/:dist_id/calendar" component={CalendarCont} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
           </Switch>
         </BrowserRouter>
       </div>

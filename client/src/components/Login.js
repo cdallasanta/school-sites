@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import '../stylesheets/login.scss';
+import { Link } from 'react-router-dom';
 
 export default class Login extends React.Component {
   state = {
@@ -65,6 +66,7 @@ export default class Login extends React.Component {
           <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
           <input type="submit"/>
         </form>
+        Or <Link to="/signup">sign up.</Link>
       </div>
     )
   }

@@ -2,8 +2,9 @@ import React from 'react';
 import $ from 'jquery';
 import '../stylesheets/login.scss';
 
-export default class Login extends React.Component {
+export default class Signup extends React.Component {
   state = {
+    name: "",
     email: "",
     password: "",
     errors: []
@@ -21,8 +22,9 @@ export default class Login extends React.Component {
 
     $.ajax({
       type: 'POST',
-      url: 'http://localhost:3001/auth/sign_in',
+      url: 'http://localhost:3001/auth',
       data: {
+        name: this.state.name,
         email: this.state.email,
         password: this.state.password
       },
@@ -58,7 +60,7 @@ export default class Login extends React.Component {
   render () {
     return (
       <div>
-        <h2>Sign in</h2>
+        <h2>Sign Up</h2>
         {this.state.errors.length > 0 ? this.renderErrors() : null}
         <form onSubmit={this.handleLogin} >
           <input name="email" value={this.state.email} onChange={this.handleChange} />
