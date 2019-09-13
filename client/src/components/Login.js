@@ -4,8 +4,8 @@ import '../stylesheets/login.scss';
 
 export default class Login extends React.Component {
   state = {
-    email: "test123@example.com",
-    password: "password",
+    email: "",
+    password: "",
     errors: []
   }
 

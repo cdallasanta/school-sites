@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
 import SchoolSelector from '../components/SchoolSelector';
+import { Link } from 'react-router-dom';
 
 class SchoolContainer extends React.Component {
   state = {
@@ -47,6 +48,7 @@ class SchoolContainer extends React.Component {
           <h1>{this.state.school_data.name}</h1>
           <ContactInfo contact={this.state.school_data.site_rep} />
           <Ad size="banner" />
+          <Link to="/login">Login</Link>
         </header>
         <div id="sidebar">
           <NavigationMenu
