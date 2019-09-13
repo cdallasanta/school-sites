@@ -1,10 +1,12 @@
 import React from 'react';
 import $ from 'jquery';
+import '../stylesheets/login.scss';
 
 export default class Login extends React.Component {
   state = {
     email: "test123@example.com",
-    password: "password"
+    password: "password",
+    errors: []
   }
 
   handleChange = e => {
@@ -15,39 +17,49 @@ export default class Login extends React.Component {
 
   handleLogin = (e) => {
     e.preventDefault();
+    $("login-errors").empty();
 
-    // fetch('http://localhost:3001/auth/sign_in', {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     email: this.state.email,
-    //     password: this.state.password
-    //   })
-    // })
     $.ajax({
       type: 'POST',
       url: 'http://localhost:3001/auth/sign_in',
       data: {
         email: this.state.email,
         password: this.state.password
+      },
+      success: (response, status, jqXHR) => {
+        sessionStorage.setItem('user',
+          JSON.stringify({
+            'access-token': jqXHR.getResponseHeader('access-token'),
+            client: jqXHR.getResponseHeader('client'),
+            uid: response.data.uid
+          })
+        );
+  // use headers: JSON.parse(sessionStorage.user) in ajax calls to api
+        this.props.history.push('/');
+      },
+      error: resp => {
+        this.setState({errors: resp.responseJSON.errors})
       }
     })
-    .then((response, status, jqXHR) => {
-      debugger;
-      sessionStorage.setItem('user',
-        JSON.stringify({
-          'access-token': jqXHR.getResponseHeader('access-token'),
-          client: jqXHR.getResponseHeader('client'),
-          uid: response.data.uid
-        })
-      );
-      this.props.history.push('/');
-    })
+  }
+
+  renderErrors = () => {
+    return (
+      <div id="login-errors" className="errors">
+        {
+          this.state.errors.map((error, i) => {
+            return <li key={i}>{error}</li>
+          })
+        }
+      </div>
+    )
   }
 
   render () {
     return (
       <div>
         <h2>Sign in</h2>
+        {this.state.errors.length > 0 ? this.renderErrors() : null}
         <form onSubmit={this.handleLogin} >
           <input name="email" value={this.state.email} onChange={this.handleChange} />
           <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
