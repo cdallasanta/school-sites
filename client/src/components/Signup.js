@@ -29,6 +29,7 @@ export default class Signup extends React.Component {
         password: this.state.password
       },
       success: (response, status, jqXHR) => {
+        debugger;
         sessionStorage.setItem('user',
           JSON.stringify({
             'access-token': jqXHR.getResponseHeader('access-token'),
@@ -40,7 +41,8 @@ export default class Signup extends React.Component {
         this.props.history.push('/');
       },
       error: resp => {
-        this.setState({errors: resp.responseJSON.errors})
+        debugger;
+        this.setState({errors: resp.responseJSON.errors.full_messages})
       }
     })
   }
@@ -63,8 +65,12 @@ export default class Signup extends React.Component {
         <h2>Sign Up</h2>
         {this.state.errors.length > 0 ? this.renderErrors() : null}
         <form onSubmit={this.handleLogin} >
-          <input name="email" value={this.state.email} onChange={this.handleChange} />
-          <input name="password" type="password" value={this.state.password} onChange={this.handleChange} />
+          <label htmlFor="name">Name: </label>
+            <input name="name" value={this.state.name} onChange={this.handleChange} /><br />
+          <label htmlFor="email">Email: </label>
+            <input name="email" value={this.state.email} onChange={this.handleChange} /><br />
+          <label htmlFor="password">Password: </label>
+            <input name="password" type="password" value={this.state.password} onChange={this.handleChange} /><br />
           <input type="submit"/>
         </form>
       </div>
