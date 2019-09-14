@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
 import SchoolSelector from '../components/SchoolSelector';
-import { Link } from 'react-router-dom';
 
 class DistrictContainer extends React.Component {
   state = {
@@ -44,7 +43,6 @@ class DistrictContainer extends React.Component {
           <header id="header">
             <h1>{this.state.district_data.name}</h1>
             <Ad size="banner" />
-            <Link to="/login">Login</Link>
           </header>
           <div id="sidebar">
             <SchoolSelector schools={this.state.district_data.schools} dist_id={this.state.district_data.id} history={this.props.history}/>

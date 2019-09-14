@@ -48,7 +48,6 @@ class SchoolContainer extends React.Component {
           <h1>{this.state.school_data.name}</h1>
           <ContactInfo contact={this.state.school_data.site_rep} />
           <Ad size="banner" />
-          <Link to="/login">Login</Link>
         </header>
         <div id="sidebar">
           <NavigationMenu
