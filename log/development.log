@@ -27862,3 +27862,92 @@ Processing by API::DistrictsController#show as */*
 Completed 200 OK in 786ms (Views: 501.3ms | ActiveRecord: 255.1ms)
 
 
+Started GET "/api/districts/1" for 127.0.0.1 at 2019-09-14 12:45:36 -0700
+  [1m[35m (19.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/chris/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by API::DistrictsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mDistrict Load (24.4ms)[0m  [1m[34mSELECT  "districts".* FROM "districts" WHERE "districts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mSchool Load (22.2ms)[0m  [1m[34mSELECT "schools".* FROM "schools" WHERE "schools"."district_id" = $1[0m  [["district_id", 1]]
+[active_model_serializers]   ↳ app/controllers/api/districts_controller.rb:3
+[active_model_serializers]   [1m[36mBlog Load (29.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 2], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 1], ["blogable_type", "District"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (42.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 2], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "District"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 4], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 4], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 5], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 5], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 6], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 6], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 7], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 7], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 8], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 8], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 9], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 9], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 10], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 10], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 11], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 11], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 12], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 12], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 13], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 13], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 14], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 14], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 15], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 15], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 1], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 1], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mUser Load (47.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:8
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (41.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:9
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (31.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:9
+[active_model_serializers]   [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs" WHERE "blogs"."blogable_id" = $1 AND "blogs"."blogable_type" = $2[0m  [["blogable_id", 3], ["blogable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:21
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."eventable_id" = $1 AND "events"."eventable_type" = $2[0m  [["eventable_id", 3], ["eventable_type", "School"]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:25
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:8
+[active_model_serializers]   [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:9
+[active_model_serializers]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/serializers/school_serializer.rb:9
+[active_model_serializers] Rendered DistrictSerializer with ActiveModelSerializers::Adapter::Attributes (1129.64ms)
+Completed 200 OK in 1515ms (Views: 1110.0ms | ActiveRecord: 337.7ms)
+
+
