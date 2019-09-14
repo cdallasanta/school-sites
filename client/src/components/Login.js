@@ -28,6 +28,9 @@ export default class Login extends React.Component {
         password: this.state.password
       },
       success: (response, status, jqXHR) => {
+        // put uid, access token, and client into cookies. It is sent as a string since
+        // it won't store an object, but we will call it with JSON.parse(sessionStorage.user)
+        // when we make the call to the api
         sessionStorage.setItem('user',
           JSON.stringify({
             'access-token': jqXHR.getResponseHeader('access-token'),
@@ -35,7 +38,7 @@ export default class Login extends React.Component {
             uid: response.data.uid
           })
         );
-  // use headers: JSON.parse(sessionStorage.user) in ajax calls to api
+
         this.props.history.push('/');
       },
       error: resp => {
