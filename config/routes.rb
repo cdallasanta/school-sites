@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     end
   end
 
+  # This is for using React Router on heroku, it defaults to using the index.html file in the client
   get '*path', to: "application#fallback_index_html", constraints: ->(request) do
     !request.xhr? && request.format.html?
   end
