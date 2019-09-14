@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
 import SchoolSelector from '../components/SchoolSelector';
+import Header from './components/Header';
 
 class DistrictContainer extends React.Component {
   state = {
@@ -40,10 +41,11 @@ class DistrictContainer extends React.Component {
     } else {
       return (
         <div id="district-page">
-          <header id="header">
+          <Header />
+          <div id="top-banner">
             <h1>{this.state.district_data.name}</h1>
             <Ad size="banner" />
-          </header>
+          </div>
           <div id="sidebar">
             <SchoolSelector schools={this.state.district_data.schools} dist_id={this.state.district_data.id} history={this.props.history}/>
             <Ad size="panel" />
