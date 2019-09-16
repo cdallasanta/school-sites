@@ -1,10 +1,8 @@
 import React from 'react';
 import Ad from '../components/Ad';
-import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
 import SchoolSelector from '../components/SchoolSelector';
-import Header from '../components/header';
 
 class DistrictContainer extends React.Component {
   state = {
@@ -35,13 +33,11 @@ class DistrictContainer extends React.Component {
           </header>
           <div id="sidebar">
           </div>
-          <Footer />
         </div>
       )
     } else {
       return (
         <div id="district-page">
-          <Header />
           <div id="top-banner">
             <h1>{this.state.district_data.name}</h1>
             <Ad size="banner" />
@@ -53,7 +49,6 @@ class DistrictContainer extends React.Component {
           </div>
           <BlogList blogs={this.state.district_data.blogs} />
           <EventsList events={this.state.district_data.events} />
-          <Footer />
         </div>
       )
     }

@@ -2,11 +2,9 @@ import React from 'react';
 import NavigationMenu from '../components/NavigationMenu';
 import ContactInfo from '../components/ContactInfo';
 import Ad from '../components/Ad';
-import Footer from '../components/Footer';
 import BlogList from '../containers/BlogList';
 import EventsList from '../containers/EventsList';
 import SchoolSelector from '../components/SchoolSelector';
-import Header from '../components/header';
 
 class SchoolContainer extends React.Component {
   state = {
@@ -44,7 +42,6 @@ class SchoolContainer extends React.Component {
   render(){
     return (
       <div id="school-page">
-        <Header />
         <div id="top-banner">
           <h1>{this.state.school_data.name}</h1>
           <ContactInfo contact={this.state.school_data.site_rep} />
@@ -60,7 +57,6 @@ class SchoolContainer extends React.Component {
         </div>
         <BlogList blogs={this.state.school_data.blogs} />
         <EventsList events={this.state.school_data.events} />
-        <Footer />
       </div>
     )
   }
