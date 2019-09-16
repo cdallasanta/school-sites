@@ -168,4 +168,4 @@ Event.create(eventable:School.find(1), title:"School Event", organizer_id:1, all
 
 #blogs
 Blog.create(blogable:District.find(1), title:"District Blog", author_id:1, content: "Lorem Ipsum")
-Blog.create(blogable:School.find(1), title:"School Blog", author_id:1, content: "Lorem Ipsum")
+Blog.create(blogable:School.find(1), title:"School Blog", author_id:1, content: "Lorem Ipsum")User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

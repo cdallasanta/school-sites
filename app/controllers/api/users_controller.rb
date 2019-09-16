@@ -8,7 +8,7 @@ class API::UsersController < ApiController
       render json: error_json(user), status: :unprocessable_entity
     end
   end
-s
+
   def error_json(user)
     { errors: user.errors.full_messages }
   end

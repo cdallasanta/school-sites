@@ -10,7 +10,7 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
-# require "sprockets/railtie"
+require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -43,17 +43,15 @@ module Api
           methods: [:get, :post, :put, :patch, :delete, :options, :head]
       end
     end
+    
+    # enable cookies for user auth
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
+  
+    # use all HTTP verbs
+    config.middleware.use Rack::MethodOverride
+  
+    # allow flash messages
+    config.middleware.use ActionDispatch::Flash
   end
-
-  # enable the use of assets
-  require "sprockets/railtie"
-  # enable cookies for user auth
-  config.middleware.use ActionDispatch::Cookies
-  config.middleware.use ActionDispatch::Session::CookieStore
-
-  # use all HTTP verbs
-  config.middleware.use Rack::MethodOverride
-
-  # allow flash messages
-  config.middleware.use ActionDispatch::Flash
 end

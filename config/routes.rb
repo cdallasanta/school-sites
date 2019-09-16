@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  mount_devise_token_auth_for 'User', at: 'auth'
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
+  # this statement below is probably needed for the devise_token gem
+  # mount_devise_token_auth_for 'User', at: 'auth'
+  
   default_url_options host: "localhost:3001"
 
   # TODO this will need to change once other school districts are added
