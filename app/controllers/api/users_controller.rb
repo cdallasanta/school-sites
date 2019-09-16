@@ -1,4 +1,4 @@
-class API::UsersController < ApplicationController
+class API::UsersController < ApiController
   def create
     user = User.new(create_params)
 
@@ -8,7 +8,7 @@ class API::UsersController < ApplicationController
       render json: error_json(user), status: :unprocessable_entity
     end
   end
-
+s
   def error_json(user)
     { errors: user.errors.full_messages }
   end

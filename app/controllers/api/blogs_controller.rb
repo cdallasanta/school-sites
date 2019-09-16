@@ -1,2 +1,2 @@
-class API::BlogsController < ApplicationController
+class API::BlogsController < ApiController
 end

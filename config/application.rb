@@ -44,4 +44,16 @@ module Api
       end
     end
   end
+
+  # enable the use of assets
+  require "sprockets/railtie"
+  # enable cookies for user auth
+  config.middleware.use ActionDispatch::Cookies
+  config.middleware.use ActionDispatch::Session::CookieStore
+
+  # use all HTTP verbs
+  config.middleware.use Rack::MethodOverride
+
+  # allow flash messages
+  config.middleware.use ActionDispatch::Flash
 end
