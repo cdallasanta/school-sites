@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Header from './components/header';
 import Footer from './components/Footer';
+import './stylesheets/index.scss'
 
 class App extends React.Component {
   render(){
